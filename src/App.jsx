@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
 function App() {
@@ -11,9 +13,10 @@ function App() {
 
   return (
     <div className="tailwind">
-      <h1 className="text-red-500">
-        nice to meet you Tailwind
-      </h1>
+      <button className="btn-c2  arrow">
+        Button
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
     </div>
   );
 }

@@ -1,4 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600;700&display=swap");
 
+@mixin Arrow($from) {
+  if($from == L) {
+  }
+}
+
+@mixin btn($theme) {
+  @if ($theme == mt) {
+    @apply rounded-xl border-2 border-c2-C font-poppins font-bold text-c1-A;
+    svg {
+      @apply text-c2-A;
+    }
+  } @else if ($theme == c2) {
+    @apply rounded-xl border-2 border-c2-B bg-c2-A font-poppins font-bold text-c1-J;
+    svg {
+      @apply text-c1-J;
+    }
+  } @else if ($theme == c1) {
+    @apply rounded-xl bg-c1-F font-poppins font-bold text-c1-A;
+    svg {
+      @apply text-c1-A;
+    }
+  } @else if ($theme == c1-J) {
+    @apply rounded-xl bg-c1-J font-poppins font-bold text-c1-A;
+    svg {
+      @apply text-c2-A;
+    }
+  }
+}
+
+@mixin size() {
+  @apply px-[48px] py-[18px];
+  &.btn-md {
+    @apply px-[16px] py-[12px];
+  }
+  &.btn-sm{
+    @apply px-[12px] py-[12px];
+  }
+}
+
+.btn {
+  &-mt {
+    @include btn(mt);
+    @include size();
+  }
+  &-c2 {
+    @include btn(c2);
+    @include size();
+  }
+  &-c1 {
+    @include btn(c1);
+    @include size();
+  }
+  &-c1-J {
+    @include btn(c1-J);
+    @include size();
+  }
+}
+
+.arrow {
+  @apply flex items-center justify-center gap-[6px];
+  svg {
+    @apply h-3 w-3 pl-4;
+  }
+}
+.arrow_l {
+  @apply flex flex-row-reverse items-center justify-center gap-[6px];
+  svg {
+    @apply h-3 w-3 rotate-180 pl-4;
+  }
+}
