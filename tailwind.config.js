@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true
+    },
     colors: {
       c1: {
         A: "#151515",
@@ -45,6 +48,7 @@ export default {
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],
       poppins: ["Poppins", "sans-serif"],
+      braah: ["Braah One", "sans-serif"]
     },
     extend: {},
   },

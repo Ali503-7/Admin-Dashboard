@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-function Input_text({ env, env_right, label, check_box, arrows }) {
+function Input_text({ env, env_right, label, check_box, arrows, placeholder }) {
   return (
     <div className="input-text">
       {label && (
@@ -11,6 +11,11 @@ function Input_text({ env, env_right, label, check_box, arrows }) {
       )}
       <div className="input">
         {env && (
+          <div className={env_right ? "env right-2" : "env left-2"}>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </div>
+        )}
+        {env_right && (
           <div className={env_right ? "env right-2" : "env left-2"}>
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
@@ -31,8 +36,8 @@ function Input_text({ env, env_right, label, check_box, arrows }) {
           type="text"
           name="Text"
           id="Text"
-          placeholder="Text field"
-          className={env || env_right || check_box ? "!pl-8" : ""}
+          placeholder={placeholder}
+          className={env || check_box ? "!pl-8" : ""}
         />
       </div>
     </div>
