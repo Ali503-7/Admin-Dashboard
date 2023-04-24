@@ -95,10 +95,7 @@
 
 // to make the check box one
 
-// <label className="Check">
-//   <input type="checkbox"/>
-//   <span className="checkmark"></span>
-// </label>
+
 .Check {
   display: block;
   position: absolute;
@@ -169,10 +166,9 @@
 
 // the enevelop
 
-// <div className="env">
-//   <FontAwesomeIcon icon={faEnvelope} />
-// </div>
 
 .env {
   @apply absolute;
 }
+
+// End all the inputs
