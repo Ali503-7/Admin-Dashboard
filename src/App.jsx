@@ -1,22 +1,22 @@
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
 function App() {
-  useEffect(() => {
-    fetch("https://opentdb.com/api.php?amount=10")
-      .then((response) => response.json())
-      .then((response) => console.log(response))
-      .catch((err) => console.error(err));
-  }, []);
-
   return (
     <div className="tailwind">
-      <button className="btn-c2  arrow">
-        Button
-        <FontAwesomeIcon icon={faChevronRight} />
-      </button>
+      <div className="input-text">
+        <label htmlFor="Text" className="block">
+          Text Label
+        </label>
+        <div className="input">
+          <div className="env right-2">
+            <FontAwesomeIcon icon={faEnvelope} />
+          </div>
+          <input type="text" name="Text" id="Text" placeholder="Text field" className="!pr-10"/>
+        </div>
+      </div>
     </div>
   );
 }
