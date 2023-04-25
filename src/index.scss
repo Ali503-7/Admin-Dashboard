@@ -1,8 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Braah+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Braah+One&display=swap");
 
 // All the buttons
 @mixin btn($theme) {
@@ -30,12 +31,12 @@
 }
 
 @mixin size() {
-  @apply px-[48px] py-[18px];
+  @apply px-[48px] py-[18px] w-fit;
   &.btn-md {
-    @apply px-[16px] py-[12px];
+    @apply px-[16px] py-[12px] w-fit;
   }
   &.btn-sm {
-    @apply px-[12px] py-[12px];
+    @apply px-[12px] py-[12px] w-fit;
   }
 }
 
@@ -95,7 +96,6 @@
 }
 
 // to make the check box one
-
 
 .Check {
   display: block;
@@ -167,25 +167,53 @@
 
 // the enevelop
 
-
 .env {
   @apply absolute;
 }
 
 // End all the inputs
 
-
 // catigores
 
 .catigores {
   @apply bg-c1-H;
   ul {
-    @apply flex flex-row gap-6 h-[55px] items-center container;
+    @apply container flex h-[55px] flex-row items-center gap-6;
   }
   li {
-    @apply text-c1-A font-poppins font-[500] text-[15px] flex items-center gap-2 cursor-pointer;
+    @apply flex cursor-pointer items-center gap-2 font-poppins text-[15px] font-[500] text-c1-A;
     svg {
-      @apply text-[10px] rotate-90 text-c2-A;
+      @apply rotate-90 text-[10px] text-c2-A;
+    }
+  }
+}
+
+.A-side_compo {
+  @apply flex flex-col gap-5;
+  h3 {
+    @apply font-poppins text-[16px] font-[600] text-c1-A;
+  }
+  ul {
+    @apply mb-5 flex flex-col gap-2;
+    li {
+      @apply font-sans text-[14px] text-c2-A underline;
+    }
+  }
+  button {
+    @apply h-[48px] w-[180px] text-[13px];
+  }
+}
+
+// products
+
+.products {
+  .bunner {
+    @apply flex h-[270px] w-[420px] flex-col justify-between rounded-xl bg-c1-E px-8 pb-8 pt-12;
+    span {
+      @apply font-poppins text-[12px] font-[600] text-c2-A;
+    }
+    h2 {
+      @apply font-poppins text-[22px] font-[600] text-c1-A;
     }
   }
 }

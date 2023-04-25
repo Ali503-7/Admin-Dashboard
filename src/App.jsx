@@ -1,9 +1,9 @@
 import "./App.css";
-import { Header } from "./components/Super_components/Header/Header";
+import { Home } from "./components/Super_components/Home_Page/Home";
 
 function App() {
   return (
-    <Header />
+    <Home />
   );
 }
 
