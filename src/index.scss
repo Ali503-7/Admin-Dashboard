@@ -173,3 +173,19 @@
 }
 
 // End all the inputs
+
+
+// catigores
+
+.catigores {
+  @apply bg-c1-H;
+  ul {
+    @apply flex flex-row gap-6 h-[55px] items-center container;
+  }
+  li {
+    @apply text-c1-A font-poppins font-[500] text-[15px] flex items-center gap-2 cursor-pointer;
+    svg {
+      @apply text-[10px] rotate-90 text-c2-A;
+    }
+  }
+}
