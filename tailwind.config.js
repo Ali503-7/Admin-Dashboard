@@ -16,6 +16,7 @@ export default {
         F: "#F5F5F5",
         H: "#F9F9F9",
         J: "#FFFFFF",
+        F1: "#F1F1F1",
       },
       c2: {
         A: "#6A983C",

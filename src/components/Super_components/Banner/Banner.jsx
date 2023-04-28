@@ -5,7 +5,7 @@ import React from 'react'
 const Banner = () => {
   return (
     <div className="products">
-      <div className="flex flex-row flex-wrap items-center justify-between">
+      <div className="flex flex-col flex-wrap justify-center gap-20 items-center xl:flex-row xl:justify-between">
         <div className="bunner">
           <div>
             <span>Banner subfocus</span>
