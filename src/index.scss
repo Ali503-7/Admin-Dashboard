@@ -5,14 +5,14 @@
 // the fonts are locale so it work on any country or vpn
 @font-face {
   font-family: "Poppins";
-  src: url("../src/Fonts/Poppins/Poppins-Black.ttf") format("truetype");
+  src: url("../public/Fonts/Fonts/Poppins/Poppins-Black.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../src/Fonts/Open_Sans/static/OpenSans-Regular.ttf")
+  src: url("../public/Fonts/Fonts/Open_Sans/static/OpenSans-Regular.ttf")
     format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "Braahmi";
-  src: url("../src/Fonts/Braah_One/BraahOne-Regular.ttf") format("truetype");
+  src: url("../public/Fonts/Fonts/Braah_One/BraahOne-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -240,11 +240,11 @@
 
 // Slider
 
-.slick-list {
-  overflow: unset;
-  left: 285px;
-  height: 220px;
-}
+// .slick-list {
+//   overflow: unset;
+//   left: 285px;
+//   height: 220px;
+// }
 .slick-prev,
 .slick-next {
   width: 32px;
@@ -252,7 +252,7 @@
   background-color: black !important;
 }
 .slick-next {
-  right: 0px !important;
+  right: 0px
 }
 .slick-prev {
   left:0px;

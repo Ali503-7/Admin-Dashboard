@@ -1,48 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { products } from "../../../../public/API/products";
 
 const Product_box = () => {
-  const url = "https://fakestoreapi.com/products";
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
-        setData(json);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchData();
-  }, []);
-  
+  const ProductsAPI = async () => {
+    await products();
+  };
+
+  setData(ProductsAPI());
+
+  console.log(data);
+
   function repeat(i, any) {
-    let array = []
+    let array = [];
     for (let g = 0; g < i; g++) {
-      array.push(any)
+      array.push(any);
     }
-    return array
+    return array;
   }
-  
+
   const loading_boxes = (
-      <div className="product_box mb-28 h-fit w-[269px] animate-pulse rounded-xl border border-c1-D p-4">
-        <div className="mb-4 h-[180px] w-[237px] bg-c1-F"></div>
-        <div>
-          <div className="mb-4">
-            <div className="mb-2 h-[5px] w-28 rounded bg-c1-D"></div>
-            <div className="h-[5px] w-52 rounded bg-c1-D"></div>
+    <div className="product_box mb-28 h-fit w-[269px] animate-pulse rounded-xl border border-c1-D p-4">
+      <div className="mb-4 h-[180px] w-[237px] bg-c1-F"></div>
+      <div>
+        <div className="mb-4">
+          <div className="mb-2 h-[5px] w-28 rounded bg-c1-D"></div>
+          <div className="h-[5px] w-52 rounded bg-c1-D"></div>
+        </div>
+        <div className="flex flex-row items-center justify-between">
+          <div className="flex">
+            <div className="mr-1 h-[20px] w-9 rounded bg-c1-D"></div>
+            <div className="mr-1 h-[20px] w-5 rounded bg-c1-D"></div>
           </div>
-          <div className="flex flex-row items-center justify-between">
-            <div className="flex">
-              <div className="mr-1 h-[20px] w-9 rounded bg-c1-D"></div>
-              <div className="mr-1 h-[20px] w-5 rounded bg-c1-D"></div>
-            </div>
-            <div className="mr-1 h-[35px] w-20 rounded bg-c1-D"></div>
-          </div>
+          <div className="mr-1 h-[35px] w-20 rounded bg-c1-D"></div>
         </div>
       </div>
-    );
+    </div>
+  );
 
   const Products = () => {
     return data
@@ -80,10 +75,8 @@ const Product_box = () => {
       : repeat(6, loading_boxes);
   };
 
-
-
   return (
-    <div className="mt-[125px] flex flex-wrap justify-between h-[810px] overflow-hidden">
+    <div className="mt-[125px] flex h-[810px] flex-wrap justify-between overflow-hidden">
       {Products()}
     </div>
   );
