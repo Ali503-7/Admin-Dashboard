@@ -1,26 +1,6 @@
-import "./App.css";
-import {
-  createBrowserRouter,
-  RouterProvider
-} from "react-router-dom";
-import MainLayout from "./components/Layout/MainLayout";
-import Home from "./components/Super_components/Home_Page/Home";
-
-const routes = createBrowserRouter([ 
-  {
-    path: "/",
-    element: <MainLayout />,
-    children: [
-      {
-        index: true,
-        element: <Home />
-      }
-    ]
-  }
-])
-
-function App() {
-  return <RouterProvider router={routes} />;
+import { createBrowserRouter } from "react-router-dom"
+function App() {                            
+  return <h1 className='bg-Light-Custom-Error'>Tailwind</h1>
 }
 
-export default App;
+export default App
