@@ -5,3 +5,78 @@
 @tailwind utilities;
 
 
+.H1 {
+  @apply text-[96px] leading-[112px] font-light
+}
+.H2 {
+  @apply text-[60px] leading-[72px] font-normal
+}
+.H3 {
+  @apply text-[48px] leading-[56px] font-normal
+}
+.H4 {
+  @apply text-[34px] leading-[42px] font-normal
+}
+.H5 {
+  @apply text-[24px] leading-[32px] font-normal
+}
+.H6 {
+  @apply text-[20px] leading-[28px] font-medium
+}
+.Subtile1 {
+  @apply text-[16px] leading-[28px] font-normal
+}
+.Subtile2 {
+  @apply text-[14px] leading-[21px] font-medium
+}
+.Body1 {
+  @apply text-[14px] leading-[24px] font-normal
+}
+.Body2 {
+  @apply text-[14px] leading-[21px] font-normal
+}
+.Capion {
+  @apply text-[12px] leading-[14px] font-normal
+}
+.Overline {
+  @apply text-[12px] leading-[14px] font-normal
+}
+.Button-L {
+  @apply text-[15px] leading-[24px] font-medium
+}
+.Button-M {
+  @apply text-[14px] leading-[24px] font-medium
+}
+.Button-S {
+  @apply text-[13px] leading-[22px] font-medium
+}
+.Input-Lable {
+    @apply text-[12px] leading-[12px] font-normal
+}
+.Helper-Text {
+  @apply text-[12px] leading-[20px] font-normal
+}
+.Input-Text {
+  @apply text-[16px] leading-[24px] font-normal
+}
+.Avatar-Initials {
+  @apply text-[20px] leading-[20px] font-normal
+}
+.chip {
+  @apply text-[12px] leading-[18px] font-normal
+}
+.Tootip {
+  @apply text-[10px] leading-[24px] font-medium
+}
+.Alert-Title {
+  @apply text-[16px] leading-[24px] font-medium
+}
+.Table-Header {
+  @apply text-[14px] leading-[24px] font-medium
+}
+.Baldge-Label {
+  @apply text-[12px] leading-[20px] font-medium
+}
+.Toast {
+  @apply text-[12px] leading-[20px] font-medium
+}
