@@ -1,7 +1,16 @@
-// import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { createContext, useState } from "react";
+import { routes } from "./Routes";
+
+export const ThemeContext = createContext();
+
 function App() {
+  const [dark, setDark] = useState(false);
+
   return (
-    <div className=" w-10 h-10 bg-black absolute bottom-1/5 right-1/2 shadow-Light_1"></div>
+    <ThemeContext.Provider value={{ dark, setDark }}>
+        <RouterProvider router={routes} />
+    </ThemeContext.Provider>
   );
 }
 
