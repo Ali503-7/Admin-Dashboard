@@ -8,7 +8,9 @@ const Layout = () => {
     <div className={dark ? "dark" : ""}>
       <div className="bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background">
         <Nav />
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
       </div>
     </div>
   );
