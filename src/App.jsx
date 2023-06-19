@@ -5,7 +5,7 @@ import { routes } from "./Routes";
 export const ThemeContext = createContext();
 
 function App() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(JSON.parse(localStorage.getItem("dark")));
 
   return (
     <ThemeContext.Provider value={{ dark, setDark }}>
