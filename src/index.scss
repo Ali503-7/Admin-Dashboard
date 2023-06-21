@@ -21,7 +21,7 @@
   @apply text-[24px] leading-[32px] font-normal
 }
 .H6 {
-  @apply text-[20px] leading-[28px] font-medium
+  @apply text-[20px] leading-[32px] font-normal
 }
 .Subtile1 {
   @apply text-[16px] leading-[28px] font-normal
@@ -79,4 +79,10 @@
 }
 .Toast {
   @apply text-[12px] leading-[20px] font-medium
+}
+
+.icon {
+  svg {
+    @apply w-6 h-6
+  }
 }

@@ -13,8 +13,8 @@ export default {
       },
 
       transitionProperty: {
-        Maxheight: "max-height, padding",
-        height: "height, padding",
+        Maxheight: "max-height, padding, width",
+        height: "height, padding, width",
       },
 
       colors: {
