@@ -12,6 +12,11 @@ export default {
         center: true,
       },
 
+      transitionProperty: {
+        Maxheight: "max-height, padding",
+        height: "height, padding",
+      },
+
       colors: {
         Light: {
           Main: {

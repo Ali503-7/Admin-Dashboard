@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
-import Nav from "../components/Nav";
+import Nav from "../components/Nav/Nav";
+
 const Layout = () => {
   const { dark } = useContext(ThemeContext);
   return (
