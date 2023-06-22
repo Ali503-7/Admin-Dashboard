@@ -90,20 +90,6 @@ export default {
             Body_Background: "#F4F5FA",
             Paper_Card: "#FFFFFF",
           },
-          Custom: {
-            Primary:
-              "linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #9155FD;",
-            Secondary:
-              "linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #8A8D93;",
-            Info: "linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #2196F3;",
-            Success:
-              "linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #4CAF50;",
-            Warning:
-              "linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #ED6C02;",
-            Error:
-              "linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #F44336;",
-            Menu_Active: "linear-gradient(270deg, #9155FD 0%, #C6A7FE 100%);",
-          },
         },
         Dark: {
           Main: {
@@ -187,6 +173,7 @@ export default {
               "linear-gradient(0deg, rgba(49, 45, 75, 0.88), rgba(49, 45, 75, 0.88)), #FFB400;",
             Error:
               "linear-gradient(0deg, rgba(49, 45, 75, 0.88), rgba(49, 45, 75, 0.88)), #F44336;",
+            Menu_Active: "linear-gradient(270deg, #9155FD 0%, #C6A7FE 100%);",
           },
         },
       },
