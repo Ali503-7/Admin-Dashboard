@@ -41,7 +41,7 @@ const Nav = () => {
   };
 
   return (
-    <nav>
+    <div>
       <div className="flex flex-row justify-between items-center">
         <Search />
         <div
@@ -55,7 +55,7 @@ const Nav = () => {
           <Profile state={profile} />
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
