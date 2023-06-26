@@ -80,29 +80,15 @@
 .Toast {
   @apply text-[12px] leading-[20px] font-medium
 }
+.Caption {
+  @apply text-[12px] leading-[14px] font-normal
+}
 
 .icon {
   svg {
     @apply w-6 h-6
   }
 }
-
-      // backgroundImage: {
-      //   Custom: {
-      //     Primary:
-      //       "linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #9155FD;",
-      //     Secondary:
-      //       ";",
-      //     Info: "",
-      //     Success:
-      //       "",
-      //     Warning:
-      //       "",
-      //     Error:
-      //       "",
-      //     Menu_Active: "",
-      //   },
-      // },
 
 .Bg_Custom_primary {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #9155FD;
@@ -128,4 +114,16 @@
 }
 .Dark_Bg_Span {
   background: linear-gradient(0deg, rgba(49, 45, 75, 0.88), rgba(49, 45, 75, 0.88)), #9155FD;
+}
+
+.NavLink {
+  @apply flex flex-row items-center gap-4 py-2 pr-[14px] pl-[22px] rounded-r-full hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover;
+
+  .circle {
+    @apply w-[12px] h-[12px] border border-Light-Text-Primary dark:border-Dark-Text-Primary rounded-full;
+  }
+
+  svg {
+    @apply w-5 h-5
+  }
 }
