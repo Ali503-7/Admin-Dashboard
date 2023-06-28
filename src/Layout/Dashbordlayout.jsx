@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 import Nav from "../components/Nav/Nav";
-import Aside from '../components/Aside/Aside'
+import Aside from "../components/Aside/Aside";
 import Footer from "../components/Footer";
 
 const Dashbordlayout = () => {
@@ -18,7 +18,7 @@ const Dashbordlayout = () => {
           <Aside />
         </aside>
         <main className="col-start-2 row-start-2 col-span-5 row-end-[12]">
-          <Outlet />
+            <Outlet />
         </main>
         <footer className="col-start-2 row-start-[12] col-span-5">
           <Footer />

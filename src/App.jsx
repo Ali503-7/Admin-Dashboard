@@ -2,7 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import { createContext, useState } from "react";
 export const ThemeContext = createContext();
 
-import Analytics from "./pages/Analytics";
+import Analytics from "./pages/CRM";
 import { createBrowserRouter } from "react-router-dom";
 import Dashbordlayout from "./Layout/Dashbordlayout";
 
