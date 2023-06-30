@@ -1,10 +1,10 @@
 import { RouterProvider } from "react-router-dom";
 import { createContext, useState } from "react";
-export const ThemeContext = createContext();
-
-import Analytics from "./pages/CRM";
 import { createBrowserRouter } from "react-router-dom";
 import Dashbordlayout from "./Layout/Dashbordlayout";
+import CRM from "./pages/CRM/CRM";
+
+export const ThemeContext = createContext();
 
 export function App() {
   const routes = createBrowserRouter([
@@ -12,7 +12,7 @@ export function App() {
       element: <Dashbordlayout />,
       children: [
         {
-          element: <Analytics />,
+          element: <CRM />,
           path: "/",
           index: true,
         },

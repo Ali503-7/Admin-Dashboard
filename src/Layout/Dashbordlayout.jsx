@@ -10,19 +10,24 @@ const Dashbordlayout = () => {
 
   return (
     <div className={dark ? "dark" : ""}>
-      <div className="h-[100vh] bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background grid grid-cols-6 grid-rows-[repeat(12,_minmax(0,_1fr))]">
-        <nav className="col-start-2 col-span-5">
-          <Nav />
-        </nav>
-        <aside className="row-span-full">
-          <Aside />
-        </aside>
-        <main className="col-start-2 row-start-2 col-span-5 row-end-[12]">
-            <Outlet />
-        </main>
-        <footer className="col-start-2 row-start-[12] col-span-5">
-          <Footer />
-        </footer>
+      <div className=" bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background ">
+        <div className="container flex flex-row h-[100vh]">
+          <aside className="w-[260px]">
+            <Aside />
+          </aside>
+
+          <div className="flex flex-col justify-between w-full">
+            <nav className="">
+              <Nav />
+            </nav>
+            <main className="h-full p-6">
+              <Outlet />
+            </main>
+            <footer className="">
+              <Footer />
+            </footer>
+          </div>
+        </div>
       </div>
     </div>
   );

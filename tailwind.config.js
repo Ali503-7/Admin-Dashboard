@@ -190,7 +190,7 @@ export default {
         Light_5:
           "0px 3px 5px -1px rgba(58, 53, 65, 0.2), 0px 5px 8px rgba(58, 53, 65, 0.14), 0px 1px 14px rgba(58, 53, 65, 0.12)",
         Light_6:
-          "0px 2px 12px -4px rgba(58, 53, 65, 0.1), 0px 2px 12px -4px rgba(58, 53, 65, 0.08), 0px 6px 16px -4px rgba(58, 53, 65, 0.1)",
+          "0px 6px 16px -4px rgba(58, 53, 65, 0.10), 0px 2px 12px -4px rgba(58, 53, 65, 0.08), 0px 2px 12px -4px rgba(58, 53, 65, 0.10)",
         Light_7:
           "0px 4px 5px -2px rgba(58, 53, 65, 0.2), 0px 7px 10px 1px rgba(58, 53, 65, 0.14), 0px 2px 16px 1px rgba(58, 53, 65, 0.12);",
         Light_8:
@@ -238,7 +238,7 @@ export default {
         Dark_5:
           "0px 3px 5px -1px rgba(19, 17, 32, 0.2), 0px 5px 8px rgba(19, 17, 32, 0.14), 0px 1px 14px rgba(19, 17, 32, 0.12)",
         Dark_6:
-          "0px 2px 12px -4px rgba(19, 17, 32, 0.1), 0px 2px 12px -4px rgba(19, 17, 32, 0.08), 0px 6px 16px -4px rgba(19, 17, 32, 0.1)",
+          "0px 6px 16px -4px rgba(19, 17, 32, 0.10), 0px 2px 12px -4px rgba(19, 17, 32, 0.08), 0px 2px 12px -4px rgba(19, 17, 32, 0.10)",
         Dark_7:
           "0px 4px 5px -2px rgba(19, 17, 32, 0.2), 0px 7px 10px 1px rgba(19, 17, 32, 0.14), 0px 2px 16px 1px rgba(19, 17, 32, 0.12)",
         Dark_8:

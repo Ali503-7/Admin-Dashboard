@@ -115,6 +115,12 @@
 .Dark_Bg_Span {
   background: linear-gradient(0deg, rgba(49, 45, 75, 0.88), rgba(49, 45, 75, 0.88)), #9155FD;
 }
+.Dark_Bg_Primary {
+  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #9155FD;
+}
+.Dark_Bg_Secondary {
+  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #8A8D93;
+}
 
 .NavLink {
   @apply flex flex-row items-center gap-4 py-2 pr-[14px] pl-[22px] rounded-r-full hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover;
