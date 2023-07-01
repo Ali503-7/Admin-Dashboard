@@ -9,7 +9,7 @@ const Lang = ({ state }) => {
         data-value="lang"
       />
       <div
-        className={`shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card Body1 absolute right-2 top-[2.5em]  rounded-md overflow-hidden transition-height duration-500 dark:text-Dark-Text-Primary ${
+        className={`shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card Body1 absolute right-2 top-[2.5em]  rounded-md overflow-hidden transition-height duration-500 dark:text-Dark-Text-Primary z-10 ${
           state ? "h-[104px] py-1 w-[6.5em]" : "h-0 py-0 w-[0em]"
         }`}
       >

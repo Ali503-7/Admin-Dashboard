@@ -104,7 +104,7 @@ const Shortcut = ({ state }) => {
           maxHeight: state ? `${contentRef.current.scrollHeight}px` : "0px",
           width: state ? "18em" : "0em",
         }}
-        className="absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] top-8 rounded-md duration-500 transition-Maxheight overflow-hidden"
+        className="absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] top-8 rounded-md duration-500 transition-Maxheight overflow-hidden z-10"
       >
         <div className="flex items-center justify-between px-4 py-3">
           <p className="leading-[1.5] text-[1.125rem] font-semibold text-Light-Main-Secondary dark:text-Dark-Main-Secondary">

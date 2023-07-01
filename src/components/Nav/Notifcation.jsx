@@ -100,7 +100,7 @@ const Notification = ({ state }) => {
       {/* Start the List */}
 
       <div
-        className={`absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] top-8 rounded-md duration-500 transition-Maxheight overflow-hidden ${
+        className={`absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] top-8 rounded-md duration-500 transition-Maxheight overflow-hidden z-10 ${
           state ? "w-[19em] max-h-[470px]" : "w-[0em] max-h-[0px]"
         }`}
       >
