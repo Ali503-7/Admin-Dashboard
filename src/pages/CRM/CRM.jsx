@@ -1,6 +1,8 @@
 import Ratings from "./Ratings";
+import Revenue from "./RevenueR";
 import Section from "./Section";
 import Transactions from "./Transactions";
+import TotalSales from "./totalSales";
 
 const CRM = () => {
   return (
@@ -18,6 +20,11 @@ const CRM = () => {
       <Transactions />
 
       {/* box-4 */}
+
+      <TotalSales />
+
+      {/* box-5 */}
+      <Revenue />
     </div>
   );
 };

@@ -133,3 +133,15 @@
     @apply w-5 h-5
   }
 }
+
+.apexcharts-xaxis-tick {
+  display: none;
+}
+
+.apexcharts-text {
+  @apply text-[14px] leading-[21px] font-normal text-Light-Text-Secondary dark:text-Dark-Text-Primary;
+}
+
+.apexcharts-bar-area .apexcharts-bar {
+  border-radius: 50%;
+}
