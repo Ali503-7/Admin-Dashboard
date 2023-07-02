@@ -15,11 +15,12 @@ class TotalSales extends Component {
       ],
       options: {
         chart: {
-          height: 600,
           type: "line",
+          height: "auto",
+          stacked: true,
           offsetX: 0,
           offsetY: 0,
-          stacked: true,
+          parentHeightOffset: 0,
           zoom: {
             enabled: true,
           },
@@ -52,11 +53,18 @@ class TotalSales extends Component {
         },
         xaxis: {
           categories: ["Jan", "Fed", "Mar", "Apr", "May", "Jun"],
+          offsetX: 0,
+          offsetY: 0,
+          format: undefined,
+          axisTicks: {
+            show: false,
+          },
           axisBorder: {
             show: false,
           },
           labels: {
             style: {},
+            maxHeight: 25,
           },
         },
         tooltip: {
@@ -83,10 +91,12 @@ class TotalSales extends Component {
           const labelsStyle = {
             colors: context.dark ? "#E7E3FCAD" : "#3A354199",
           };
+          const ChartDark = context.dark ? ["#312D4B"] : ["#ffffff"];
 
           // Update the options object with the updated labels style
           const updatedOptions = {
             ...this.state.options,
+            colors: ChartDark,
             xaxis: {
               ...this.state.options.xaxis,
               labels: {
@@ -97,7 +107,7 @@ class TotalSales extends Component {
           };
 
           return (
-            <div className="col-span-4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 pb-0 rounded-md relative">
+            <div className="col-span-4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">
               <div>
                 <h5 className="Body1 !font-semibold">Total Sales</h5>
                 <p className="H6">$21,845</p>
@@ -107,7 +117,7 @@ class TotalSales extends Component {
                 options={updatedOptions} // Use the updated options object
                 series={this.state.series}
                 type="line"
-                height="190"
+                height={213}
               />
             </div>
           );

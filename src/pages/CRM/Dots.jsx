@@ -5,7 +5,7 @@ const Dots = () => {
   const [menu , setMenu] = useState(false)
 
   return (
-    <div className="absolute right-5 top-5">
+    <div className="absolute right-5 top-5 z-[5]">
       <BsThreeDotsVertical
         className="hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover w-6 h-6 p-1 rounded-full cursor-pointer"
         onClick={() => setMenu((prev) => !prev)}

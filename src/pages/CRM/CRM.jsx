@@ -24,7 +24,7 @@ const CRM = () => {
       <TotalSales />
 
       {/* box-5 */}
-      <Revenue />
+      <Revenue /> 5 
     </div>
   );
 };
