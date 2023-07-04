@@ -105,9 +105,6 @@ class Revenue extends Component {
           offsetX: 0,
           offsetY: 0,
           format: undefined,
-          axisTicks: {
-            show: false,
-          },
           axisBorder: {
             show: false,
           },

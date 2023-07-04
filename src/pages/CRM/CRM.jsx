@@ -3,6 +3,7 @@ import Revenue from "./RevenueR";
 import Section from "./Section";
 import Transactions from "./Transactions";
 import TotalSales from "./totalSales";
+import Sales from "./Sales"
 
 const CRM = () => {
   return (
@@ -24,7 +25,12 @@ const CRM = () => {
       <TotalSales />
 
       {/* box-5 */}
-      <Revenue /> 5 
+
+      <Revenue /> 
+
+      {/* box-6 */}
+
+      <Sales />
     </div>
   );
 };
