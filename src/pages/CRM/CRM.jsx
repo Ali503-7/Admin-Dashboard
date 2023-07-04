@@ -3,11 +3,12 @@ import Revenue from "./RevenueR";
 import Section from "./Section";
 import Transactions from "./Transactions";
 import TotalSales from "./totalSales";
-import Sales from "./Sales"
+import Sales from "./Sales";
+import Activity from "./Activity";
 
 const CRM = () => {
   return (
-    <div className="grid grid-cols-[repeat(16,_minmax(0,_1fr))] grid-flow-row-dense gap-6 grid-rows text-Light-Text-Primary dark:text-Dark-Text-Primary">
+    <div className="grid sm:grid-cols-[repeat(2,_minmax(0,_1fr))] lg:grid-cols-[repeat(16,_minmax(0,_1fr))]  grid-cols-[repeat(0,_minmax(0,_1fr))] grid-flow-row-dense gap-6 grid-rows text-Light-Text-Primary dark:text-Dark-Text-Primary">
       {/* box-1 */}
 
       <Ratings />
@@ -26,11 +27,15 @@ const CRM = () => {
 
       {/* box-5 */}
 
-      <Revenue /> 
+      <Revenue />
 
       {/* box-6 */}
 
       <Sales />
+
+      {/* box-7 */}
+
+      <Activity />
     </div>
   );
 };

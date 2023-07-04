@@ -11,12 +11,12 @@ const Dashbordlayout = () => {
   return (
     <div className={dark ? "dark" : ""}>
       <div className=" bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background ">
-        <div className="flex flex-row h-[100vh]">
+        <div className="flex flex-row">
           <aside className="w-[260px]">
             <Aside />
           </aside>
 
-          <div className="flex flex-col justify-between w-full container max-w-[1370px]">
+          <div className="flex flex-col justify-between container max-w-[1370px]">
             <nav className="">
               <Nav />
             </nav>

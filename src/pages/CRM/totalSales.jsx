@@ -107,7 +107,7 @@ class TotalSales extends Component {
           };
 
           return (
-            <div className="col-span-4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">
+            <div className="sm:col-span-4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">
               <div>
                 <h5 className="Body1 !font-semibold">Total Sales</h5>
                 <p className="H6">$21,845</p>
