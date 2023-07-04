@@ -1,8 +1,8 @@
-import React, { Fragment, useContext } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "../../App";
 import Dots from "./Dots";
 import Chart from "react-apexcharts";
-import {BsCurrencyDollar} from 'react-icons/bs'
+import { BsCurrencyDollar } from "react-icons/bs";
 
 const Sales = () => {
   const { dark } = useContext(ThemeContext);
@@ -12,72 +12,72 @@ const Sales = () => {
 
   const series = [12, 25, 13, 50];
 
-const options = {
-  labels: ["Apparel", "Electronic", "FMCG", "Other Sales"],
-  states: {
-    hover: {
-      filter: {
-        type: "none",
+  const options = {
+    labels: ["Apparel", "Electronic", "FMCG", "Other Sales"],
+    states: {
+      hover: {
+        filter: {
+          type: "none",
+        },
       },
     },
-  },
-  chart: {
-    width: 223,
-    type: "donut",
-    offsetY: 0,
-    parentHeightOffset: 0,
-  },
-  stroke: {
-    width: 0,
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  legend: {
-    show: false,
-  },
-  colors: ["#9155FD", "#9155FDB3", "#9155FD80", hexDarkAndLight],
-  plotOptions: {
-    pie: {
-      customScale: 1,
-      donut: {
-        labels: {
-          show: true,
-          name: {
+    chart: {
+      width: 223,
+      type: "donut",
+      offsetY: 0,
+      parentHeightOffset: 0,
+    },
+    stroke: {
+      width: 0,
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    legend: {
+      show: false,
+    },
+    colors: ["#9155FD", "#9155FDB3", "#9155FD80", hexDarkAndLight],
+    plotOptions: {
+      pie: {
+        customScale: 1,
+        donut: {
+          labels: {
             show: true,
-            fontSize: "24px ",
-            fontFamily: "Inter, sans-serif",
-            fontWeight: "400",
-            color: hexDarkAndLight_Lable,
-            offsetY: 20,
-          },
-          value: {
-            show: true,
-            fontSize: "44px",
-            fontFamily: "Inter, sans-serif",
-            fontWeight: "400",
-            color: hexDarkAndLight_Lable,
-            offsetY: -20,
-            formatter: function (val) {
-              return `${val}k`;
+            name: {
+              show: true,
+              fontSize: "24px ",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: "400",
+              color: hexDarkAndLight_Lable,
+              offsetY: 20,
             },
-          },
-          total: {
-            show: true,
-            label: "Weekly Sales",
-            color: hexDarkAndLight_Lable,
-            formatter: function (w) {
-              const total = w.globals.seriesTotals.reduce((a, b) => {
-                return a + b;
-              }, 0);
-              return `${total}k`;
+            value: {
+              show: true,
+              fontSize: "44px",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: "400",
+              color: hexDarkAndLight_Lable,
+              offsetY: -20,
+              formatter: function (val) {
+                return `${val}k`;
+              },
+            },
+            total: {
+              show: true,
+              label: "Weekly Sales",
+              color: hexDarkAndLight_Lable,
+              formatter: function (w) {
+                const total = w.globals.seriesTotals.reduce((a, b) => {
+                  return a + b;
+                }, 0);
+                return `${total}k`;
+              },
             },
           },
         },
       },
     },
-  },
-};
+  };
 
   return (
     <div className="sm:col-span-8 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">

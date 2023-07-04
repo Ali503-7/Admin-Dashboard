@@ -1,125 +1,174 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 @tailwind base;
-@tailwind components; 
+@tailwind components;
 @tailwind utilities;
 
-
 .H1 {
-  @apply text-[96px] leading-[112px] font-light
+  @apply text-[96px] leading-[112px] font-light;
 }
 .H2 {
-  @apply text-[60px] leading-[72px] font-normal
+  @apply text-[60px] leading-[72px] font-normal;
 }
 .H3 {
-  @apply text-[48px] leading-[56px] font-normal
+  @apply text-[48px] leading-[56px] font-normal;
 }
 .H4 {
-  @apply text-[34px] leading-[42px] font-normal
+  @apply text-[34px] leading-[42px] font-normal;
 }
 .H5 {
-  @apply text-[24px] leading-[32px] font-normal
+  @apply text-[24px] leading-[32px] font-normal;
 }
 .H6 {
-  @apply text-[20px] leading-[32px] font-medium
+  @apply text-[20px] leading-[32px] font-medium;
 }
 .Subtile1 {
-  @apply text-[16px] leading-[28px] font-normal
+  @apply text-[16px] leading-[28px] font-normal;
 }
 .Subtile2 {
-  @apply text-[14px] leading-[21px] font-medium
+  @apply text-[14px] leading-[21px] font-medium;
 }
 .Body1 {
-  @apply text-[16px] leading-[24px] font-normal
+  @apply text-[16px] leading-[24px] font-normal;
 }
 .Body2 {
-  @apply text-[14px] leading-[21px] font-normal
+  @apply text-[14px] leading-[21px] font-normal;
 }
 .Capion {
-  @apply text-[12px] leading-[14px] font-normal
+  @apply text-[12px] leading-[14px] font-normal;
 }
 .Overline {
-  @apply text-[12px] leading-[14px] font-normal
+  @apply text-[12px] leading-[14px] font-normal;
 }
 .Button-L {
-  @apply text-[15px] leading-[24px] font-medium
+  @apply text-[15px] leading-[24px] font-medium;
 }
 .Button-M {
-  @apply text-[14px] leading-[24px] font-medium
+  @apply text-[14px] leading-[24px] font-medium;
 }
 .Button-S {
-  @apply text-[13px] leading-[22px] font-medium
+  @apply text-[13px] leading-[22px] font-medium;
 }
 .Input-Lable {
-    @apply text-[12px] leading-[12px] font-normal
+  @apply text-[12px] leading-[12px] font-normal;
 }
 .Helper-Text {
-  @apply text-[12px] leading-[20px] font-normal
+  @apply text-[12px] leading-[20px] font-normal;
 }
 .Input-Text {
-  @apply text-[16px] leading-[24px] font-normal
+  @apply text-[16px] leading-[24px] font-normal;
 }
 .Avatar-Initials {
-  @apply text-[20px] leading-[20px] font-normal
+  @apply text-[20px] leading-[20px] font-normal;
 }
 .Chip {
-  @apply text-[13px] leading-[18px] font-normal
+  @apply text-[13px] leading-[18px] font-normal;
 }
 .Tootip {
-  @apply text-[10px] leading-[24px] font-medium
+  @apply text-[10px] leading-[24px] font-medium;
 }
 .Alert-Title {
-  @apply text-[16px] leading-[24px] font-medium
+  @apply text-[16px] leading-[24px] font-medium;
 }
 .Table-Header {
-  @apply text-[14px] leading-[24px] font-medium
+  @apply text-[14px] leading-[24px] font-medium;
 }
 .Baldge-Label {
-  @apply text-[12px] leading-[20px] font-medium
+  @apply text-[12px] leading-[20px] font-medium;
 }
 .Toast {
-  @apply text-[12px] leading-[20px] font-medium
+  @apply text-[12px] leading-[20px] font-medium;
 }
 .Caption {
-  @apply text-[12px] leading-[14px] font-normal
+  @apply text-[12px] leading-[14px] font-normal;
 }
 
 .icon {
   svg {
-    @apply w-6 h-6
+    @apply w-6 h-6;
   }
 }
 
 .Bg_Custom_primary {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #9155FD;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.88)
+    ),
+    #9155fd;
 }
 .Bg_Custom_Secondary {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #8A8D93;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.88)
+    ),
+    #8a8d93;
 }
 .Bg_Custom_Info {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #2196F3;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.88)
+    ),
+    #2196f3;
 }
 .Bg_Custom_Succes {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #4CAF50;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.88)
+    ),
+    #4caf50;
 }
 .Bg_Custom_Warning {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #ED6C02;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.88)
+    ),
+    #ed6c02;
 }
 .Bg_Custom_Error {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #F44336;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.88)
+    ),
+    #f44336;
 }
 
 .Bg_Span {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)), #9155FD;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(255, 255, 255, 0.88)
+    ),
+    #9155fd;
 }
 .Dark_Bg_Span {
-  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88), rgba(49, 45, 75, 0.88)), #9155FD;
+  background: linear-gradient(
+      0deg,
+      rgba(49, 45, 75, 0.88),
+      rgba(49, 45, 75, 0.88)
+    ),
+    #9155fd;
 }
 .Dark_Bg_Primary {
-  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #9155FD;
+  background: linear-gradient(
+      0deg,
+      rgba(49, 45, 75, 0.88) 0%,
+      rgba(49, 45, 75, 0.88) 100%
+    ),
+    #9155fd;
 }
 .Dark_Bg_Secondary {
-  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #8A8D93;
+  background: linear-gradient(
+      0deg,
+      rgba(49, 45, 75, 0.88) 0%,
+      rgba(49, 45, 75, 0.88) 100%
+    ),
+    #8a8d93;
 }
 
 .NavLink {
@@ -130,7 +179,7 @@
   }
 
   svg {
-    @apply w-5 h-5
+    @apply w-5 h-5;
   }
 }
 
@@ -160,4 +209,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 133.4%;
+}
+
+.apexcharts-text.apexcharts-xaxis-label {
+  font-size: 12px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%;
+  letter-spacing: 0.4px;
 }

@@ -5,6 +5,7 @@ import Transactions from "./Transactions";
 import TotalSales from "./totalSales";
 import Sales from "./Sales";
 import Activity from "./Activity";
+import WeeklySales from "./WeeklySales";
 
 const CRM = () => {
   return (
@@ -36,6 +37,10 @@ const CRM = () => {
       {/* box-7 */}
 
       <Activity />
+
+      {/* box-8 */}
+
+      <WeeklySales />
     </div>
   );
 };

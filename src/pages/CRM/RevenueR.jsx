@@ -89,8 +89,6 @@ class Revenue extends Component {
         },
         yaxis: {
           show: false,
-          showAlways: false,
-          showForNullSeries: false,
           labels: {
             show: false,
           },
