@@ -134,7 +134,13 @@ const WeeklySales = () => {
       <Chart type="bar" height={203} options={options} series={series} />
       <div className="flex flex-row justify-center gap-[50px] items-center">
         <div className="flex flex-row items-center">
-          <AiOutlineRise className="p-[9px] w-full h-full text-white rounded-md bg-Light-Main-Primary mr-3" />
+          <div
+            className={`text-Light-Main-Primary dark:text-Dark-Main-Primary text-[24px] p-[9px] mr-4 rounded-md ${
+              dark ? "Dark_Bg_Primary" : "Bg_Custom_primary"
+            }`}
+          >
+            <AiOutlineRise className="text-2xl" />
+          </div>
           <div>
             <h3 className="Body1 !font-semibold">34.6k</h3>
             <p className="Caption">Sales</p>
@@ -142,11 +148,11 @@ const WeeklySales = () => {
         </div>
         <div className="flex flex-row items-center">
           <div
-            className={`text-Light-Main-Warning dark:text-Dark-Main-Warning text-[24px] p-[9px] mr-4 rounded-md ${
-              dark ? "Dark_Bg_Span" : "Bg_Span"
+            className={`text-Light-Main-Success dark:text-Dark-Main-Success text-[24px] p-[9px] mr-4 rounded-md ${
+              dark ? "Dark_Bg_Succes" : "Bg_Custom_Succes"
             }`}
           >
-            <BsCurrencyDollar className="text-2xl " />
+            <BsCurrencyDollar className="text-2xl" />
           </div>
           <div>
             <h3 className="Body1 !font-semibold">$482k</h3>

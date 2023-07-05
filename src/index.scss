@@ -170,6 +170,14 @@
     ),
     #8a8d93;
 }
+.Dark_Bg_Succes {
+  background: linear-gradient(
+      0deg,
+      rgba(49, 45, 75, 0.88) 0%,
+      rgba(49, 45, 75, 0.88) 100%
+    ),
+    #4caf50;
+}
 
 .NavLink {
   @apply flex flex-row items-center gap-4 py-2 pr-[14px] pl-[22px] rounded-r-full hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover;
