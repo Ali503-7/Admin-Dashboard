@@ -6,6 +6,7 @@ import TotalSales from "./totalSales";
 import Sales from "./Sales";
 import Activity from "./Activity";
 import WeeklySales from "./WeeklySales";
+import DobbleBox from "./DobbleBox";
 
 const CRM = () => {
   return (
@@ -41,6 +42,10 @@ const CRM = () => {
       {/* box-8 */}
 
       <WeeklySales />
+
+      {/* box-9 box-10 */}
+
+      <DobbleBox />
     </div>
   );
 };
