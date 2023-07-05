@@ -1,13 +1,15 @@
 import { useContext } from "react";
 import Chart from "react-apexcharts";
 import { ThemeContext } from "../../App";
+import Dots from "./Dots";
+import { AiOutlineRise } from "react-icons/ai";
+import { BsCurrencyDollar } from "react-icons/bs";
 
 const WeeklySales = () => {
-
-  const {dark} = useContext(ThemeContext)
+  const { dark } = useContext(ThemeContext);
 
   const LabelColors = dark ? "#E7E3FCAD" : "#3A354199";
-  
+
   const series = [
     {
       data: [8, 13, 10, 13, 19, 7, 9],
@@ -54,10 +56,10 @@ const WeeklySales = () => {
     ],
     plotOptions: {
       bar: {
-        borderRadius: 5,
+        borderRadius: 4,
         borderRadiusApplication: "around",
         borderRadiusWhenStacked: "all",
-        columnWidth: "60%",
+        columnWidth: "27.724px",
         distributed: false,
       },
     },
@@ -79,8 +81,10 @@ const WeeklySales = () => {
         },
       },
       padding: {
-        left: 0,
+        top: 0,
         right: 0,
+        bottom: 0,
+        left: 0,
       },
     },
     xaxis: {
@@ -88,7 +92,7 @@ const WeeklySales = () => {
       offsetX: 0,
       offsetY: 0,
       format: undefined,
-      tickPlacement: 'on',
+      tickPlacement: "on",
       axisBorder: {
         show: false,
       },
@@ -117,13 +121,39 @@ const WeeklySales = () => {
 
   return (
     <div className="sm:col-span-5 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">
-      <Chart
-        type="bar"
-        // width={292}
-        height={203}
-        options={options}
-        series={series}
-      />
+      <div>
+        <h1 className="H6 text-Light-Text-Primary dark:text-Dark-Text-Primary !font-semibold">
+          Weekly Sales
+        </h1>
+        <p className="Body2 text-Light-Text-Secondary dark:text-Dark-Text-Primary">
+          Total 85.4k Sales
+        </p>
+      </div>
+
+      <Dots />
+      <Chart type="bar" height={203} options={options} series={series} />
+      <div className="flex flex-row justify-center gap-[50px] items-center">
+        <div className="flex flex-row items-center">
+          <AiOutlineRise className="p-[9px] w-full h-full text-white rounded-md bg-Light-Main-Primary mr-3" />
+          <div>
+            <h3 className="Body1 !font-semibold">34.6k</h3>
+            <p className="Caption">Sales</p>
+          </div>
+        </div>
+        <div className="flex flex-row items-center">
+          <div
+            className={`text-Light-Main-Warning dark:text-Dark-Main-Warning text-[24px] p-[9px] mr-4 rounded-md ${
+              dark ? "Dark_Bg_Span" : "Bg_Span"
+            }`}
+          >
+            <BsCurrencyDollar className="text-2xl " />
+          </div>
+          <div>
+            <h3 className="Body1 !font-semibold">$482k</h3>
+            <p className="Caption">Total Profit</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
