@@ -8,6 +8,7 @@ import Activity from "./Activity";
 import WeeklySales from "./WeeklySales";
 import DobbleBox from "./DobbleBox";
 import UpgradePlan from "./UpgradePlan";
+import Meeting from "./Meeting";
 
 const CRM = () => {
   return (
@@ -52,6 +53,9 @@ const CRM = () => {
 
       <UpgradePlan />
 
+      {/* box-12 */}
+
+      <Meeting />
     </div>
   );
 };

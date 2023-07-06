@@ -113,7 +113,7 @@
     ),
     #2196f3;
 }
-.Bg_Custom_Succes {
+.Bg_Custom_Success {
   background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.88),
@@ -170,13 +170,21 @@
     ),
     #8a8d93;
 }
-.Dark_Bg_Succes {
+.Dark_Custom_Success {
   background: linear-gradient(
       0deg,
       rgba(49, 45, 75, 0.88) 0%,
       rgba(49, 45, 75, 0.88) 100%
     ),
     #4caf50;
+}
+
+.Dark_Custom_Error {
+  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #F44336;
+}
+
+.Dark_Custom_Warning {
+  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #FFB400;
 }
 
 .Box {
