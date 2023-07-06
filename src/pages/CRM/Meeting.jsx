@@ -1,6 +1,15 @@
 import React, { useContext } from 'react'
 import Dots from './Dots';
 import { ThemeContext } from '../../App';
+import { BsCalendar } from 'react-icons/bs'
+import img1 from '../../assets/Imgs/avater/2.png'
+import img2 from '../../assets/Imgs/avater/4.png'
+import img3 from '../../assets/Imgs/avater/5.png'
+import img4 from '../../assets/Imgs/avater/8.png'
+import img5 from '../../assets/Imgs/avater/Avatar.png'
+import img6 from '../../assets/Imgs/avater/5.png'
+
+
 
 const Meeting = () => {
   const {dark} = useContext(ThemeContext)
@@ -13,14 +22,19 @@ const Meeting = () => {
       </h1>
       <div className="flex flex-col gap-6 justify-between">
         <div className="flex flex-row items-center justify-between">
-          <div>
-            {/*  */}
+          <div className="flex flex-row gap-3 items-center">
+            <img
+              src={img1}
+              alt="Avatar"
+              className="rounded-full w-[38px] h-[38px]"
+            />
+
             <div>
               <p className="Body2 !font-semibold text-Light-Text-Primary dark:text-Dark-Text-Primary">
                 Call with Woods
               </p>
-              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary">
-                {/*  */} 21 Jul | 08:20-10:30
+              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary flex flex-row gap-[6px]">
+                <BsCalendar /> 21 Jul | 08:20-10:30
               </p>
             </div>
           </div>
@@ -33,14 +47,18 @@ const Meeting = () => {
           </span>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <div>
-            {/*  */}
+          <div className="flex flex-row gap-3 items-center">
+            <img
+              src={img2}
+              alt="Avatar"
+              className="rounded-full w-[38px] h-[38px]"
+            />
             <div>
               <p className="Body2 !font-semibold text-Light-Text-Primary dark:text-Dark-Text-Primary">
                 Call with hilda
               </p>
-              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary">
-                {/*  */} 21 Jul | 08:20-10:30
+              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary flex flex-row gap-[6px]">
+                <BsCalendar /> 21 Jul | 08:20-10:30
               </p>
             </div>
           </div>
@@ -54,14 +72,18 @@ const Meeting = () => {
           </span>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <div>
-            {/*  */}
+          <div className="flex flex-row gap-3 items-center">
+            <img
+              src={img3}
+              alt="Avatar"
+              className="rounded-full w-[38px] h-[38px]"
+            />
             <div>
               <p className="Body2 !font-semibold text-Light-Text-Primary dark:text-Dark-Text-Primary">
                 Conference call
               </p>
-              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary">
-                {/*  */} 21 Jul | 08:20-10:30
+              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary flex flex-row gap-[6px]">
+                <BsCalendar /> 21 Jul | 08:20-10:30
               </p>
             </div>
           </div>
@@ -74,14 +96,18 @@ const Meeting = () => {
           </span>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <div>
-            {/*  */}
+          <div className="flex flex-row gap-3 items-center">
+            <img
+              src={img4}
+              alt="Avatar"
+              className="rounded-full w-[38px] h-[38px]"
+            />
             <div>
               <p className="Body2 !font-semibold text-Light-Text-Primary dark:text-Dark-Text-Primary">
                 Meeting with Mark
               </p>
-              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary">
-                {/*  */} 21 Jul | 08:20-10:30
+              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary flex flex-row gap-[6px]">
+                <BsCalendar /> 21 Jul | 08:20-10:30
               </p>
             </div>
           </div>
@@ -94,14 +120,18 @@ const Meeting = () => {
           </span>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <div>
-            {/*  */}
+          <div className="flex flex-row gap-3 items-center">
+            <img
+              src={img5}
+              alt="Avatar"
+              className="rounded-full w-[38px] h-[38px]"
+            />
             <div>
               <p className="Body2 !font-semibold text-Light-Text-Primary dark:text-Dark-Text-Primary">
                 Meeting in Oakland
               </p>
-              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary">
-                {/*  */} 21 Jul | 08:20-10:30
+              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary flex flex-row gap-[6px]">
+                <BsCalendar /> 21 Jul | 08:20-10:30
               </p>
             </div>
           </div>
@@ -114,14 +144,18 @@ const Meeting = () => {
           </span>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <div>
-            {/*  */}
+          <div className="flex flex-row gap-3 items-center">
+            <img
+              src={img6}
+              alt="Avatar"
+              className="rounded-full w-[38px] h-[38px]"
+            />
             <div>
               <p className="Body2 !font-semibold text-Light-Text-Primary dark:text-Dark-Text-Primary">
                 Meeting with Carl
               </p>
-              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary">
-                {/*  */} 21 Jul | 08:20-10:30
+              <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary flex flex-row gap-[6px]">
+                <BsCalendar /> 21 Jul | 08:20-10:30
               </p>
             </div>
           </div>
