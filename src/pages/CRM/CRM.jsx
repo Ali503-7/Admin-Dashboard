@@ -9,6 +9,7 @@ import WeeklySales from "./WeeklySales";
 import DobbleBox from "./DobbleBox";
 import UpgradePlan from "./UpgradePlan";
 import Meeting from "./Meeting";
+import DevMeetup from "./DevMeetup";
 
 const CRM = () => {
   return (
@@ -59,7 +60,7 @@ const CRM = () => {
 
       {/* box-13 */}
 
-      
+      <DevMeetup />
     </div>
   );
 };
