@@ -90,7 +90,7 @@ const DobbleBox = () => {
   };
 
   return (
-    <div className="sm:col-span-3 flex flex-col gap-6 justify-between">
+    <div className="sm:col-span-2 flex flex-col gap-6 justify-between">
       {/* box-1 */}
 
       <div className="sm:col-span-2 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col gap-4 justify-between p-5 rounded-md relative">

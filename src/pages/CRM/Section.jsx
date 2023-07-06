@@ -6,7 +6,7 @@ import Man from "../../assets/Imgs/pose_m18.png";
 const Section = () => {
   const { dark } = useContext(ThemeContext);
   return (
-    <div className="bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card flex flex-row sm:col-span-4 p-5 shadow-Light_6 dark:shadow-Dark_6 h-[154px] rounded-md">
+    <div className="Box flex flex-row sm:col-span-3 h-[154px] ">
       <div className="gap-[6px]">
         <h4 className="Body1 !font-semibold">Sessions</h4>
 

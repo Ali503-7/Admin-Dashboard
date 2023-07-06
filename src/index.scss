@@ -179,6 +179,10 @@
     #4caf50;
 }
 
+.Box {
+  @apply bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 p-5 rounded-md relative;
+}
+
 .NavLink {
   @apply flex flex-row items-center gap-4 py-2 pr-[14px] pl-[22px] rounded-r-full hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover;
 
