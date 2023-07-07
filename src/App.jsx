@@ -13,8 +13,12 @@ export function App() {
       children: [
         {
           element: <CRM />,
-          path: "/",
+          path: "/CRM",
           index: true,
+        },
+        {
+          element: <h1>Here is Analatics</h1>,
+          path: "/Analytics",
         },
       ],
     },
