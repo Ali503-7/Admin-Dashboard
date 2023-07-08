@@ -149,7 +149,7 @@ const WeeklySales = () => {
         <div className="flex flex-row items-center">
           <div
             className={`text-Light-Main-Success dark:text-Dark-Main-Success text-[24px] p-[9px] mr-4 rounded-md ${
-              dark ? "Dark_Bg_Succes" : "Bg_Custom_Succes"
+              dark ? "Dark_Custom_Success" : "Bg_Custom_Success"
             }`}
           >
             <BsCurrencyDollar className="text-2xl" />
