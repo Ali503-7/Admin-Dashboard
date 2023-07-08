@@ -24,10 +24,10 @@ const Dashbordlayout = () => {
   return (
     <div className={dark ? "dark" : ""}>
       <div
-        className=" bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background "
+        className="min-h-screen bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background "
         onScroll={(e) => handleScroll(e)}
       >
-        <div className="flex flex-row">
+        <div className="flex flex-row min-h-screen">
           <aside className="w-[260px]">
             <Aside />
           </aside>

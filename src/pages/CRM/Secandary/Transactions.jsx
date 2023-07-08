@@ -1,7 +1,7 @@
-import Dots from "./Dots";
-import { MdDevices } from 'react-icons/md'
-import { AiOutlineRise } from 'react-icons/ai'
-import { LuUser } from 'react-icons/lu'
+import Dots from "../../../components/Geniral/Dots";
+import { MdDevices } from "react-icons/md";
+import { AiOutlineRise } from "react-icons/ai";
+import { LuUser } from "react-icons/lu";
 
 const Transactions = () => {
   return (

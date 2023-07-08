@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import WorkSpace from "../../assets/Imgs/cards/workstation.png";
-import { ThemeContext } from "../../App";
+import WorkSpace from "../../../assets/Imgs/cards/workstation.png";
+import { ThemeContext } from "../../../App";
 import { AiOutlineStar, AiOutlineClockCircle } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
 import { RiUser3Line } from "react-icons/ri";

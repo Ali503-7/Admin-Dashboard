@@ -1,6 +1,6 @@
-import Girl from "../../assets/Imgs/triangle-light.png";
+import Girl from "../../../assets/Imgs/triangle-light.png";
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../../App";
 
 const Ratings = () => {
   const { dark } = useContext(ThemeContext);
@@ -34,4 +34,4 @@ const Ratings = () => {
   );
 };
 
-export default Ratings
+export default Ratings;

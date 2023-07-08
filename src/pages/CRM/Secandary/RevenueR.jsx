@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
-import { ThemeContext } from "../../App";
-import Dots from "./Dots";
+import { ThemeContext } from "../../../App";
+import Dots from "../../../components/Geniral/Dots";
 
 class Revenue extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import Chart from "react-apexcharts";
 import { MdCardTravel } from "react-icons/md";
-import Dots from "./Dots";
+import Dots from "../../../components/Geniral/Dots";
 
 const DobbleBox = () => {
   const series = [
@@ -114,7 +114,9 @@ const DobbleBox = () => {
               -18%
             </span>
           </div>
-          <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary">Yearly Project</p>
+          <p className="Caption text-Light-Text-Secondary dark:text-Dark-Text-Primary">
+            Yearly Project
+          </p>
         </div>
       </div>
     </div>

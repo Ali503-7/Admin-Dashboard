@@ -216,7 +216,9 @@
 .apexcharts-text {
   @apply text-[14px] leading-[21px] font-normal text-Light-Text-Secondary dark:text-Dark-Text-Primary;
 }
-
+.Page {
+  @apply grid sm:grid-cols-[repeat(2,_minmax(0,_1fr))] lg:grid-cols-[repeat(12,_minmax(0,_1fr))]  grid-cols-[repeat(0,_minmax(0,_1fr))] grid-flow-row-dense gap-6 text-Light-Text-Primary dark:text-Dark-Text-Primary;
+}
 .apexcharts-legend-marker {
   border-radius: 50% !important;
 }
@@ -245,3 +247,4 @@
   line-height: 166%;
   letter-spacing: 0.4px;
 }
+

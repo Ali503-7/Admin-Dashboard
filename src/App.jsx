@@ -2,7 +2,8 @@ import { RouterProvider } from "react-router-dom";
 import { createContext, useState } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Dashbordlayout from "./Layout/Dashbordlayout";
-import CRM from "./pages/CRM/CRM";
+import CRM from "./pages/CRM/Primary/CRM";
+import Analytics from "./pages/Analytics/Primary/Analytics";
 
 export const ThemeContext = createContext();
 
@@ -17,8 +18,9 @@ export function App() {
           index: true,
         },
         {
-          element: <h1>Here is Analatics</h1>,
-          path: "/Analytics",
+          element: <Analytics />,
+          path: "/",
+          index: true,
         },
       ],
     },

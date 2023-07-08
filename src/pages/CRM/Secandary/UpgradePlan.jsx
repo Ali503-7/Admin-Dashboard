@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import Dots from "./Dots";
-import { ThemeContext } from "../../App";
-import Bag from "../../assets/Imgs/Bag.png";
-import Bank1 from '../../assets/Imgs/Logo/logo-mastercard-small.png'
-import Bank2 from '../../assets/Imgs/Logo/logo-credit-card-2.png'
+import Dots from "../../../components/Geniral/Dots";
+import { ThemeContext } from "../../../App";
+import Bag from "../../../assets/Imgs/Bag.png";
+import Bank1 from "../../../assets/Imgs/Logo/logo-mastercard-small.png";
+import Bank2 from "../../../assets/Imgs/Logo/logo-credit-card-2.png";
 
 const UpgradePlan = () => {
   const { dark } = useContext(ThemeContext);
@@ -89,7 +89,9 @@ const UpgradePlan = () => {
           />
         </div>
         <div>
-          <button className="w-full py-[7px] px-[22px] bg-Light-Main-Primary text-white rounded-md">Contect Now</button>
+          <button className="w-full py-[7px] px-[22px] bg-Light-Main-Primary text-white rounded-md">
+            Contect Now
+          </button>
         </div>
       </div>
     </div>

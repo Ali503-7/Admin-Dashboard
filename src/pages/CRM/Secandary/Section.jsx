@@ -1,7 +1,6 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
-import Man from "../../assets/Imgs/pose_m18.png";
-
+import { ThemeContext } from "../../../App";
+import Man from "../../../assets/Imgs/pose_m18.png";
 
 const Section = () => {
   const { dark } = useContext(ThemeContext);
@@ -32,6 +31,6 @@ const Section = () => {
       />
     </div>
   );
-}
+};
 
-export default Section
+export default Section;

@@ -1,5 +1,5 @@
 import { MdPictureAsPdf } from "react-icons/md";
-import user from '../../assets/Imgs/avater/Avatar.png'
+import user from '../../../assets/Imgs/avater/Avatar.png'
 
 const Activity = () => {
   return (

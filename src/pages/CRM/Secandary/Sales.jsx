@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../../App";
-import Dots from "./Dots";
+import { ThemeContext } from "../../../App";
+import Dots from "../../../components/Geniral/Dots";
 import Chart from "react-apexcharts";
 import { BsCurrencyDollar } from "react-icons/bs";
 
