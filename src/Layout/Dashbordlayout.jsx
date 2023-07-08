@@ -27,9 +27,9 @@ const Dashbordlayout = () => {
         className="min-h-screen bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background "
         onScroll={(e) => handleScroll(e)}
       >
-        <div className="flex flex-row min-h-screen">
-          <aside className="w-[260px]">
-            <Aside />
+        <div className="flex flex-row min-h-screen relative">
+          <aside className="min-w-[260px] sticky left-0 top-0 h-screen">
+            <Aside className="sticky top-0 left-0" />
           </aside>
 
           <div className="grid grid-rows-[auto,1fr,auto] container max-w-[1370px] relative">
