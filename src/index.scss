@@ -192,7 +192,9 @@
 .Dark_Custom_Warning {
   background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #FFB400;
 }
-
+.Dark_Bg_Info {
+  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #2196F3;
+}
 .Box {
   @apply bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 p-5 rounded-md relative;
 }

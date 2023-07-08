@@ -140,7 +140,7 @@ const WeeklyOverview = () => {
   };
 
   return (
-    <div className="Box col-span-4">
+    <div className="Box col-span-4 flex flex-col justify-between">
       <h6 className="H6 text-Light-Text-Primary dark:text-Dark-Text-Primary pb-5">
         Weekly Overview
       </h6>
@@ -152,7 +152,9 @@ const WeeklyOverview = () => {
           Your sales performance is 45% better compared to last month
         </p>
       </div>
-      <button className="mt-5 w-full uppercase Button-M text-white bg-Light-Main-Primary shadow-Light_3 dark:shadow-Dark_3 h-[38px] px-5 rounded-md">Details</button>
+      <button className="mt-5 w-full uppercase Button-M text-white bg-Light-Main-Primary shadow-Light_3 dark:shadow-Dark_3 h-[38px] px-5 rounded-md">
+        Details
+      </button>
     </div>
   );
 };
