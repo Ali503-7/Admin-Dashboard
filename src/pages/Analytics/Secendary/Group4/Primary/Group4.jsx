@@ -1,6 +1,7 @@
 import React from 'react'
 import Box_1 from '../Secandary/Box_1'
 import Box_2 from '../Secandary/Box_2'
+import Box_3 from '../Secandary/Box_3'
 
 const Group4 = () => {
   return (
@@ -9,6 +10,8 @@ const Group4 = () => {
       <Box_1 />
 
       <Box_2 />
+
+      <Box_3 />
 
     </div>
   )
