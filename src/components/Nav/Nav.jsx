@@ -44,7 +44,7 @@ const Nav = ({ scrollTop }) => {
     <div
       className={
         scrollTop != 0
-          ? "dark:!bg-[rgba(40,36,61,0.85)] !bg-[rgba(255,255,255,0.85)] dark:shadow-[rgba(21,_19,_35,_0.42)] shadow-[rgba(58,_53,_65,_0.42)] shadow-[0px_4px_8px_-4px] backdrop-blur-[7.5px] rounded-b-[10px] px-5 mx-6 transition-all"
+          ? "dark:!bg-[rgba(40,36,61,0.85)] !bg-[rgba(255,255,255,0.85)] dark:shadow-[rgba(21,_19,_35,_0.42)] shadow-[rgba(58,_53,_65,_0.42)] shadow-[0px_4px_8px_-4px] backdrop-blur-[7.5px] rounded-b-[10px] px-3 mx-6 transition-all"
           : "transition-all"
       }
     >

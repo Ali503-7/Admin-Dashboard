@@ -13,6 +13,7 @@ const Dashbordlayout = () => {
     const handleScroll = (event) => {
       setScrollTop(window.scrollY);
     };
+    setScrollTop(window.scrollY);
 
     window.addEventListener("scroll", handleScroll);
 
