@@ -1,11 +1,6 @@
-import { useContext } from "react";
 import Chart from "react-apexcharts";
-import { ThemeContext } from "../../../../../App";
-const Box_4 = () => {
-  const { dark } = useContext(ThemeContext);
 
-  const Colors = dark ? "#312D4B" : "#FFFFFF";
-  const LabelColors = dark ? "#E7E3FC61" : "#3A354161";
+const Box_4 = () => {
 
   const series = [
     {
@@ -49,7 +44,7 @@ const Box_4 = () => {
     grid: {
       xaxis: {
         lines: {
-          show: false,
+          show: true,
         },
       },
       yaxis: {
@@ -93,9 +88,7 @@ const Box_4 = () => {
       labels: {
         show: false,
       },
-    },
-    xaxis: {
-      tickPlacement: "on",
+      
     },
     tooltip: {
       enabled: false,

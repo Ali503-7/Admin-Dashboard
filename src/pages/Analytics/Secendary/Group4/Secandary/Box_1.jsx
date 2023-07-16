@@ -30,6 +30,8 @@ const Box_1 = () => {
         enabled: true,
       },
     },
+
+
     colors: ["#9155FD"],
     dataLabels: {
       enabled: false,
