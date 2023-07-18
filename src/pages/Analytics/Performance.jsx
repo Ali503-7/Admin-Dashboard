@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Dots from "../../components/Geniral/Dots";
 import Chart from "react-apexcharts";
+import { ThemeContext } from "../../App";
 
 const Performance = () => {
+  const {dark} = useContext(ThemeContext)
+  const LabelColors = dark ? "#E7E3FC61" : "#3A354161";
+
   const series = [
     {
       name: "Net Worth",
@@ -43,9 +47,14 @@ const Performance = () => {
     },
     grid: {
       yaxis: {
-        show:false
-      }
-    }
+        show: false,
+      },
+    },
+    legend: {
+      labels: {
+        colors: LabelColors,
+      },
+    },
   };
 
   return (
