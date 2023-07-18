@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import Dots from "../../components/Geniral/Dots";
+import Dots from "../../../components/Geniral/Dots";
 import Chart from "react-apexcharts";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../../App";
 
 const Performance = () => {
-  const {dark} = useContext(ThemeContext)
+  const { dark } = useContext(ThemeContext);
   const LabelColors = dark ? "#E7E3FC61" : "#3A354161";
 
   const series = [
@@ -34,7 +34,7 @@ const Performance = () => {
       width: 0,
     },
     fill: {
-      opacity: 0.7,
+      opacity: 0.9,
     },
     markers: {
       size: 0,
@@ -67,7 +67,7 @@ const Performance = () => {
           series={series}
           type="radar"
           width={400}
-          height={300}
+          height={250}
         />
       </div>
     </div>

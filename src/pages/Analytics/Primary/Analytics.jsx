@@ -3,7 +3,8 @@ import Group4 from "../Secendary/Group4/Primary/Group4"
 import TotalErning from "../Secendary/TotalErning"
 import Transactions_2 from "../Secendary/Transaction_2"
 import WeeklyOverview from "../Secendary/WeeklyOverview"
-import Performance from "../Performance"
+import Performance from "../Secendary/Performance"
+import DepositAndWithdraw from "../Secendary/Deposit&Withdraw"
 
 const Analytics = () => {
   return (
@@ -32,6 +33,10 @@ const Analytics = () => {
       {/* box-9 */}
 
       <Performance />
+
+      {/* box-10 */}
+
+      <DepositAndWithdraw />
     </div>
   )
 }
