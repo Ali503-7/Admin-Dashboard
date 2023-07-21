@@ -144,7 +144,7 @@ class Revenue extends Component {
             },
           };
           return (
-            <div className="sm:col-span-3 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">
+            <div className="lg:col-span-3 bg-Light-Other-Paper_Card sm:col-span-3 dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">
               <div className="Body1 !font-semibold">Revenue Report</div>
               <Dots />
               <Chart

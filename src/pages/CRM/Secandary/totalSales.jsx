@@ -107,7 +107,7 @@ class TotalSales extends Component {
           };
 
           return (
-            <div className="sm:col-span-3 flex flex-col justify-between Box">
+            <div className="lg:col-span-3 sm:col-span-3 flex flex-col justify-between Box">
               <div>
                 <h5 className="Body1 !font-semibold">Total Sales</h5>
                 <p className="H6">$21,845</p>

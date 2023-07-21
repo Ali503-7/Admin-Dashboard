@@ -90,7 +90,7 @@ const DobbleBox = () => {
   };
 
   return (
-    <div className="sm:col-span-2 flex flex-col gap-6 justify-between">
+    <div className="lg:col-span-2 sm:col-span-2 grid grid-cols-2 sm:flex-col gap-6 justify-between">
       {/* box-1 */}
 
       <div className="sm:col-span-2 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col gap-4 justify-between p-5 rounded-md relative">
@@ -101,7 +101,7 @@ const DobbleBox = () => {
 
       {/* box-2 */}
 
-      <div className="sm:col-span-2 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col p-5 rounded-md relative h-1/2">
+      <div className="sm:col-span-2 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col p-5 rounded-md relative ">
         <Dots />
         <div className=" w-10 h-10 flex items-center justify-center rounded-full text-[#fff] bg-Light-Main-Primary mb-5">
           <MdCardTravel className=" text-[26px]" />

@@ -6,7 +6,7 @@ const Ratings = () => {
   const { dark } = useContext(ThemeContext);
 
   return (
-    <div className="sm:col-span-3 Box h-[154px] flex flex-row">
+    <div className="lg:col-span-3 sm:col-span-3 Box h-[154px] flex flex-row justify-between">
       <div className="gap-[6px]">
         <h4 className="Body1 !font-semibold">Ratings</h4>
 
@@ -28,7 +28,7 @@ const Ratings = () => {
       <img
         src={Girl}
         alt="girl"
-        className="w-[113px] h-[178px] relative -top-11"
+        className="h-[178px] relative -top-11 left-5"
       />
     </div>
   );

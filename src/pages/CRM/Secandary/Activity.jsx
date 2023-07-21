@@ -3,7 +3,7 @@ import user from '../../../assets/Imgs/avater/Avatar.png'
 
 const Activity = () => {
   return (
-    <div className="sm:col-span-6 Box flex flex-col justify-between">
+    <div className="lg:col-span-6 sm:col-span-6 Box flex flex-col justify-between">
       <h1 className="text-Light-Text-Primary dark:text-Dark-Text-Primary H6 !font-semibold mb-5">
         Activity Timeline
       </h1>

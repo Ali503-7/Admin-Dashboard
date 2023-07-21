@@ -80,10 +80,10 @@ const Sales = () => {
   };
 
   return (
-    <div className="sm:col-span-6 Box flex flex-col justify-between">
+    <div className="lg:col-span-6 sm:col-span-6 Box flex flex-col justify-between">
       <h1 className="Body1 !font-semibold">Sales Overview</h1>
       <Dots />
-      <div className="flex flex-row">
+      <div className="flex sm:flex-row flex-col items-center">
         <Chart
           type="donut"
           width={223}

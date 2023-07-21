@@ -39,7 +39,7 @@ const Dashboards = () => {
       </div>
       <ul
         className={`flex flex-col gap-[6px] mb-2 overflow-hidden transition-height ${
-          dash ? "!h-[132px]" : "!h-[0px] mb-[0px]"
+          dash ? "!h-[90px]" : "!h-[0px] mb-[0px]"
         }`}
       >
         <li>
@@ -85,29 +85,6 @@ const Dashboards = () => {
               } ${activeState === "" ? "border-white" : ""}`}
             ></div>
             Analytics
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink
-            to="/eCommerce"
-            className={`NavLink flex flex-row items-center gap-4 py-2 pr-[14px] pl-[22px] rounded-r-full hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover ${
-              activeState === "eCommerce"
-                ? dark
-                  ? "shadow-Dark_3 Dark_Bg_Active_Menu"
-                  : "Bg_Custom_Active_menu shadow-Light_3 text-white"
-                : ""
-            }`}
-            onClick={() => setActiveState("eCommerce")}
-          >
-            <div
-              className={`w-[12px] h-[12px] border rounded-full ${
-                dark
-                  ? "dark:border-Dark-Text-Primary"
-                  : "border-Light-Text-Primary"
-              } ${activeState === "eCommerce" ? "border-white" : ""}`}
-            ></div>
-            eCommerce
           </NavLink>
         </li>
       </ul>

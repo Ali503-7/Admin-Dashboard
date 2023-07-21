@@ -6,7 +6,7 @@ const Footer = () => {
       <div>
         © 2022, Made with ❤️ by <span className='text-Light-Main-Primary cursor-pointer'>ThemeSelection</span>
       </div>
-      <div className='flex flex-row gap-5'>
+      <div className='sm:flex flex-row gap-5 hidden'>
         <div className='text-Light-Main-Primary cursor-pointer'>More Themes</div>
         <div className='text-Light-Main-Primary cursor-pointer'>License</div>
         <div className='text-Light-Main-Primary cursor-pointer'>Documentation</div>

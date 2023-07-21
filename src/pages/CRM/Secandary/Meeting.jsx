@@ -13,7 +13,7 @@ const Meeting = () => {
   const { dark } = useContext(ThemeContext);
 
   return (
-    <div className="Box sm:col-span-4">
+    <div className="Box lg:col-span-4 sm:col-span-6">
       <Dots />
       <h1 className="H6 text-Light-Text-Primary dark:text-Dark-Text-Primary mb-5">
         Meeting Schedule

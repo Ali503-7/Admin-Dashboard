@@ -59,7 +59,7 @@ const WeeklySales = () => {
         borderRadius: 4,
         borderRadiusApplication: "around",
         borderRadiusWhenStacked: "all",
-        columnWidth: "27.724px",
+        columnWidth: "80%",
         distributed: false,
       },
     },
@@ -120,7 +120,7 @@ const WeeklySales = () => {
   };
 
   return (
-    <div className="sm:col-span-4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">
+    <div className="lg:col-span-4 sm:col-span-4  bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 flex flex-col justify-between p-5 rounded-md relative">
       <div>
         <h1 className="H6 text-Light-Text-Primary dark:text-Dark-Text-Primary !font-semibold">
           Weekly Sales

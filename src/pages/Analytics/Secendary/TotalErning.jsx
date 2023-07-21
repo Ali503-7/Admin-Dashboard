@@ -16,7 +16,7 @@ const TotalErning = () => {
         <div className="flex flex-col">
           <h4 className="H4 flex items-center">
             $24,895
-            <RiArrowUpSFill className="text-Light-Main-Success dark:text-Dark-Main-Success Body2 font-semibold" />{" "}
+            <RiArrowUpSFill className="text-Light-Main-Success dark:text-Dark-Main-Success Body2 font-semibold" />
             <span className="text-Light-Main-Success dark:text-Dark-Main-Success Body2 font-semibold">
               10%
             </span>
