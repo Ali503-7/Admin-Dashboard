@@ -1,7 +1,7 @@
 import Cup from "../../../assets/Imgs/misc/trophy.png";
 const Congratulations = () => {
   return (
-    <div className="Box col-span-4 flex flex-col gap-4">
+    <div className="Box xl:col-span-4 lg:col-span-4 sm:col-span-8 md:col-span-3 col-span-1 flex flex-col gap-4">
       <div>
         <h6 className="H6">Congratulations John! 🎉</h6>
         <span className="Body2">Best seller of the month</span>
@@ -21,7 +21,11 @@ const Congratulations = () => {
       <button className="Button-S text-white py-1 px-[14px] bg-Light-Main-Primary dark:bg-Dark-Main-Primary uppercase rounded-md w-fit">
         View Sales
       </button>
-      <img src={Cup} alt="Cup" className="absolute w-[79px] h-[102px] right-6 bottom-8" />
+      <img
+        src={Cup}
+        alt="Cup"
+        className="absolute w-[79px] h-[102px] right-6 bottom-8"
+      />
     </div>
   );
 };

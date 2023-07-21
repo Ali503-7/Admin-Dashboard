@@ -6,7 +6,7 @@ import Box_4 from '../Secandary/Box_4'
 
 const Group4 = () => {
   return (
-    <div className='col-span-4 grid grid-rows-2 grid-cols-2 gap-5'>
+    <div className='lg:col-span-4 sm:col-span-4 grid grid-rows-2 grid-cols-2 gap-5'>
 
       <Box_1 />
 

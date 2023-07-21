@@ -5,7 +5,7 @@ import { LuUser } from "react-icons/lu";
 
 const Transactions = () => {
   return (
-    <div className="lg:col-span-6 sm:col-span-6 flex flex-col justify-between Box">
+    <div className="lg:col-span-6 sm:col-span-8 flex flex-col justify-between Box">
       <div className="text-Light-Text-Primary dark:text-Dark-Text-Primary H6 !font-semibold">
         Transactions
       </div>

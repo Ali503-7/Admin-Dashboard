@@ -140,7 +140,7 @@ const WeeklyOverview = () => {
   };
 
   return (
-    <div className="Box col-span-4 flex flex-col justify-between">
+    <div className="Box lg:col-span-4 sm:col-span-4 flex flex-col justify-between">
       <h6 className="H6 text-Light-Text-Primary dark:text-Dark-Text-Primary pb-5">
         Weekly Overview
       </h6>

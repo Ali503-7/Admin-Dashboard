@@ -10,7 +10,7 @@ import { IoLocationOutline } from "react-icons/io5";
 const DevMeetup = () => {
   const { dark } = useContext(ThemeContext);
   return (
-    <div className="lg:col-span-4 sm:col-span-6 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 rounded-md relative ">
+    <div className="lg:col-span-4 sm:col-span-8 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 rounded-md relative ">
       {/* Img */}
       <img src={WorkSpace} alt="" />
       <div className=" p-5 ">

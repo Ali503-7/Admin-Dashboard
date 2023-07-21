@@ -125,8 +125,8 @@ const DepositAndWithdraw = () => {
   };
 
   return (
-    <div className="Box col-span-8 flex flex-row justify-between">
-      <div className="w-1/2 pr-5">
+    <div className="Box lg:col-span-8 sm:col-span-8 flex sm:flex-row flex-col justify-between">
+      <div className="sm:w-1/2 sm:pr-5 pb-5">
         <div className="flex felx-row justify-between items-center pb-5">
           <h6 className="H6">Deposit</h6>
           <p className="Subtile2 text-Light-Main-Primary dark:text-Dark-Main-Primary">
@@ -137,8 +137,8 @@ const DepositAndWithdraw = () => {
           {Group_1(Deposit)}
         </div>
       </div>
-      <div className="relative h-full w-px bg-Light-Other-Divider dark:bg-Dark-Other-Divider"></div>
-      <div className="w-1/2 pl-5">
+      <div className="relative sm:h-full h-px sm:w-px w-full bg-Light-Other-Divider dark:bg-Dark-Other-Divider"></div>
+      <div className="sm:w-1/2 sm:pl-5 pt-5">
         <div className="flex felx-row justify-between items-center pb-5">
           <h6 className="H6">Withdraw</h6>
           <p className="Subtile2 text-Light-Main-Primary dark:text-Dark-Main-Primary">

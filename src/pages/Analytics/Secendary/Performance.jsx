@@ -20,8 +20,10 @@ const Performance = () => {
   const options = {
     chart: {
       type: "radar",
-      offsetX: -50,
+      offsetX: 0,
       offsetY: 0,
+      width: "auto",
+       height: 'auto',
       zoom: {
         enabled: true,
       },
@@ -58,18 +60,10 @@ const Performance = () => {
   };
 
   return (
-    <div className="Box sm:col-span-4">
+    <div className="Box sm:col-span-4 h-full flex flex-col ">
       <h3 className="H6 pb-5">Performance</h3>
       <Dots />
-      <div>
-        <Chart
-          options={options}
-          series={series}
-          type="radar"
-          width={400}
-          height={250}
-        />
-      </div>
+      <Chart options={options} series={series} type="radar" className="my-auto" />
     </div>
   );
 };

@@ -8,7 +8,7 @@ import Bank2 from "../../../assets/Imgs/Logo/logo-credit-card-2.png";
 const UpgradePlan = () => {
   const { dark } = useContext(ThemeContext);
   return (
-    <div className="lg:col-span-4 sm:col-span-6 Box flex flex-col justify-between">
+    <div className="lg:col-span-4 sm:col-span-8 Box flex flex-col justify-between">
       <Dots />
       <h1 className="mb-5 H6">Upgrade Your Plan</h1>
       <div className="flex flex-col gap-[14px]">

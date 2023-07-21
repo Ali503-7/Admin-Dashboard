@@ -6,7 +6,7 @@ const Ratings = () => {
   const { dark } = useContext(ThemeContext);
 
   return (
-    <div className="lg:col-span-3 sm:col-span-3 Box h-[154px] flex flex-row justify-between">
+    <div className="lg:col-span-3 sm:col-span-4 Box h-[154px] flex flex-row justify-between">
       <div className="gap-[6px]">
         <h4 className="Body1 !font-semibold">Ratings</h4>
 

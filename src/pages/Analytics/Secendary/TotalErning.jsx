@@ -9,7 +9,7 @@ import { ThemeContext } from "../../../App";
 const TotalErning = () => {
   const {dark} = useContext(ThemeContext)
   return (
-    <div className="col-span-4 Box">
+    <div className="lg:col-span-4 sm:col-span-4 Box">
       <Dots />
       <h6 className="H6 pb-5">Total Earning</h6>
       <div className="flex flex-col gap-5">
