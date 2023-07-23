@@ -2,7 +2,7 @@ import logo from "../../assets/Imgs/Logo/Logo.png";
 import Dashboards from "./Dashboards";
 import Apps from "./AppsLinst/Apps";
 
-const Divider = ({text}) => {
+const Divider = ({text, aside, setAside}) => {
   return (
     <div className="relative z-10">
       <div className="z-20 w-full h-px top-1/2 bg-Light-Other-Divider dark:bg-Dark-Other-Divider absolute"></div>
@@ -11,8 +11,7 @@ const Divider = ({text}) => {
   )
 }
 
-const Aside = () => {
-
+const Aside = ({ aside, setAside }) => {
   return (
     <div className="py-2 flex flex-col gap-[6px]">
       <div className="flex flex-row justify-between items-center py-2 px-[22px]">
@@ -22,7 +21,7 @@ const Aside = () => {
             MATERIO
           </p>
         </div>
-        <input type="radio" name="" id="" />
+        {aside ?  <p className="text-xl cursor-pointer font-bold" onClick={() => setAside(prev => !prev)}>x</p>: <input type="radio" name="" id="" />}
       </div>
       <div className="pr-[18px]">
         <Dashboards />

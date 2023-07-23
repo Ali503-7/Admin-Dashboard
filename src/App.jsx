@@ -25,8 +25,8 @@ export function App() {
       ],
     },
   ]);
-  const [dark, setDark] = useState(JSON.parse(localStorage.getItem("dark")));
 
+  const [dark, setDark] = useState(JSON.parse(localStorage.getItem("dark")));
 
   return (
     <ThemeContext.Provider value={{ dark, setDark }}>

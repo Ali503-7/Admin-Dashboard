@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Lang from "./Lang";
 import Dark from "./Dark";
 import Shortcut from "./Shorcut";
 import Notification from "./Notifcation";
 import Profile from "./Profile";
 import Search from "./Search";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ThemeContext } from "../../App";
 
-const Nav = ({ scrollTop }) => {
+const Nav = ({ scrollTop, aside, setAside }) => {
   // Initialize the states using the useState hook
   const [states, setStates] = useState({
     lang: false,
@@ -49,7 +51,12 @@ const Nav = ({ scrollTop }) => {
       }
     >
       <div className="flex flex-row justify-between items-center z-50">
-        <Search />
+        <div className="flex flex-row items-center">
+          <div className="text-xl p-2 text-Light-Text-Primary cursor-pointer rounded-full hover:bg-Light-Action-Hover dark:text-Dark-Text-Primary dark:hover:bg-Dark-Action-Hover xl:hidden">
+            <GiHamburgerMenu onClick={() => setAside((prev) => !prev)} />
+          </div>
+          <Search />
+        </div>
         <div
           className="flex flex-row items-center"
           onClick={(e) => StateHandel(e)}
