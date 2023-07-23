@@ -6,7 +6,7 @@ import { AiOutlineCalendar } from "react-icons/ai";
 import { MdContentCopy } from "react-icons/md";
 import Invoice from "./Invoice/Invoice";
 
-const Apps = () => {
+const Apps = ({ setAside }) => {
   const location = useLocation();
 
   const [activeState, setActiveState] = useState(null);
@@ -14,7 +14,7 @@ const Apps = () => {
   useEffect(() => {
     const currentPath = location.pathname;
     const lastPath = currentPath.substring(currentPath.lastIndexOf("/") + 1);
-
+    setAside((prev) => !prev);
     setActiveState(lastPath);
   }, [location]);
 

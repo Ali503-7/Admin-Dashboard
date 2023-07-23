@@ -27,6 +27,8 @@ const Dashbordlayout = () => {
 
   // Detact aside Toggling
 
+  console.log('Main', aside)
+
   return (
     <div className={dark ? "dark" : ""}>
       <div
@@ -34,19 +36,15 @@ const Dashbordlayout = () => {
         onScroll={(e) => handleScroll(e)}
       >
         <div className="flex flex-row  min-h-screen relative">
-          <div className="max-w-[0px] ">
+          <div className="max-w-[0px] xl:min-w-[260px] ">
             <aside
-              className={`xl:min-w-[260px] sticky left-0 top-0 xl:translate-x-0 h-screen transition-transform z-[100] sm:bg-Light-Other-Body_Background ${
+              className={`xl:min-w-[260px] sticky left-0 top-0 xl:translate-x-0 h-screen transition-transform z-[100] bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background ${
                 aside
-                  ? "translate-x-0 !min-w-[260px] bg-Light-Other-Body_Background"
+                  ? "translate-x-0 !min-w-[260px]"
                   : "-translate-x-64"
               }`}
             >
-              <Aside
-                className="sticky top-0 left-0"
-                aside={aside}
-                setAside={setAside}
-              />
+              <Aside className="sticky top-0 left-0" setAside={setAside} aside={aside} />
             </aside>
           </div>
 
