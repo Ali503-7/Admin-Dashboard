@@ -4,6 +4,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashbordlayout from "./Layout/Dashbordlayout";
 import CRM from "./pages/CRM/Primary/CRM";
 import Analytics from "./pages/Analytics/Primary/Analytics";
+import EmailLayout from "./Layout/EmailLayout";
+import EmailMain from "./pages/Email/EmailMain";
 
 export const ThemeContext = createContext();
 
@@ -22,6 +24,16 @@ export function App() {
           path: "/",
           index: true,
         },
+        {
+          element: <EmailLayout />,
+          children: [
+            {
+              index: true,
+              element: <EmailMain />,
+              path: "/Email"
+            },
+          ]
+        }
       ],
     },
   ]);
