@@ -27,8 +27,6 @@ const Dashbordlayout = () => {
 
   // Detact aside Toggling
 
-  console.log('Main', aside)
-
   return (
     <div className={dark ? "dark" : ""}>
       <div
