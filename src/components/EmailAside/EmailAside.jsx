@@ -50,12 +50,29 @@ const EmailAside = () => {
         icon: <IoMdTrash />,
       },
     ],
-    secend: [],
+    secend: [
+      {
+        color: "Light-Main-Success",
+        p: "Personal",
+      },
+      {
+        color: "Light-Main-Primary",
+        p: "Company",
+      },
+      {
+        color: "Light-Main-Warning",
+        p: "Important",
+      },
+      {
+        color: "Light-Main-Error",
+        p: "Private",
+      },
+    ],
   };
 
-  const WithIcons = () => {
+  const WithIcons = (array) => {
     
-    return Buttons.first.map((item, index) => {
+    return array.map((item, index) => {
       let NumStyle = "";
       if (item.num == "21") NumStyle = `${
         dark
@@ -98,6 +115,21 @@ const EmailAside = () => {
     });
   };
 
+  const WithoutIcons = (array) => {
+    return array.map((item, index) => {
+      return (
+        <div
+          key={index}
+          onClick={(data) => HandelFilter(data)}
+          className="flex flex-row items-center gap-4"
+        >
+          <div className={`w-3 h-3 bg-${item.color} rounded-full`}></div>
+          <p className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary">{item.p}</p>
+        </div>
+      );
+    })
+  }
+
   return (
     <div className="w-[260px] ">
       <div className="p-5">
@@ -105,8 +137,13 @@ const EmailAside = () => {
           Compose
         </button>
       </div>
-      <div>{WithIcons()}</div>
-      <div></div>
+      <div className="flex flex-col py-[10px] gap-1">{WithIcons(Buttons.first)}</div>
+      <div className="p-5">
+        <div className="Caption text-Light-Text-Disabled dark:text-Dark-Text-Primary mb-1">
+          LABELS
+        </div>
+        <div className="flex flex-col gap-1">{WithoutIcons(Buttons.secend)}</div>
+      </div>
     </div>
   );
 };
