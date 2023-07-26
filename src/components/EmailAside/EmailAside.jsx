@@ -121,17 +121,23 @@ const EmailAside = () => {
         <div
           key={index}
           onClick={(data) => HandelFilter(data)}
-          className="flex flex-row items-center gap-4"
+          className="flex flex-row items-center gap-4 relative"
         >
           <div className={`w-3 h-3 bg-${item.color} rounded-full`}></div>
-          <p className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary">{item.p}</p>
+          <p className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary">
+            {item.p}
+          </p>
+          <div
+            className="absolute cursor-pointer w-full h-full Body1 "
+            data-key={item.p}
+          ></div>
         </div>
       );
     })
   }
 
   return (
-    <div className="w-[260px] ">
+    <div className="min-w-[260px] ">
       <div className="p-5">
         <button className="Button-M w-full rounded-md  py-[7px] px-5 bg-Light-Main-Primary dark:bg-Dark-Main-Primary uppercase text-white">
           Compose

@@ -4,7 +4,7 @@ import EmailAside from "../components/EmailAside/EmailAside";
 // here will create the layout of the email page
 const EmailLayout = () => {
   return (
-    <div className="bg-white rounded-md h-full dark:bg-Dark-Other-Paper_Card">
+    <div className="bg-white rounded-md max-h-full w-full dark:bg-Dark-Other-Paper_Card flex overflow-hidden">
       <EmailAside />
 
       <Outlet />

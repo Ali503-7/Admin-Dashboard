@@ -32,6 +32,10 @@ export function App() {
               element: <EmailMain />,
               path: "/Email"
             },
+            // {
+            //   element: <ShowEmail />,
+            //   path: "/:id"
+            // }
           ]
         }
       ],

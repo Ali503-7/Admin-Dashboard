@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Lang from "./Lang";
 import Dark from "./Dark";
 import Shortcut from "./Shorcut";
@@ -6,9 +6,8 @@ import Notification from "./Notifcation";
 import Profile from "./Profile";
 import Search from "./Search";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { ThemeContext } from "../../App";
 
-const Nav = ({ scrollTop, aside, setAside }) => {
+const Nav = ({ scrollTop, setAside }) => {
   // Initialize the states using the useState hook
   const [states, setStates] = useState({
     lang: false,
