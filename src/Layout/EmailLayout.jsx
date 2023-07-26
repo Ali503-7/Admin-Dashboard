@@ -7,7 +7,7 @@ const EmailLayout = () => {
   const [aside, setAside] = useState(false)
 
   return (
-    <div className="bg-white rounded-md max-h-full w-full dark:bg-Dark-Other-Paper_Card flex overflow-hidden">
+    <div className="bg-white rounded-md w-full dark:bg-Dark-Other-Paper_Card flex overflow-hidden">
       <EmailAside aside={aside} />
 
       <Outlet />

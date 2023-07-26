@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 const Emails = ({ emails }) => {
   const EmilComponent = () => {
     return emails.map((email) => {
-      let DotColor = ""
+      let DotColor = "";
       if (email.type === "Personal") DotColor = "bg-Light-Main-Success";
       if (email.type === "Company") DotColor = "bg-Light-Main-Primary";
       if (email.type === "Important") DotColor = "bg-Light-Main-Warning";
       if (email.type === "Private") DotColor = "bg-Light-Main-Error";
-      
 
       return (
         <Link
@@ -20,24 +19,24 @@ const Emails = ({ emails }) => {
             "bg-Light-Action-Hover dark:bg-Dark-Action-Hover"
           }`}
         >
-          <div>
+          <div className="w-fit">
             <input type="checkbox" name="" id="" />
           </div>
-          <div>
+          <div className="w-fit">
             <AiOutlineStar className="w-6 h-6 hidden sm:block" />
           </div>
-          <div>
+          <div className="w-fit">
             <img
               src={email.avatar}
               alt={email.name}
-              className="w-8 rounded-full"
+              className="w-8 h-8 rounded-full"
             />
           </div>
-          <div className="flex sm:flex-row flex-col w-full sm:gap-3 xl:items-center mr-auto overflow-hidden">
-            <p className="text-Light-Text-Primary dark:text-Dark-Text-Primary Body1 !font-semibold truncate block">
+          <div className="flex flex-col flex-1 w-px overflow-hidden">
+            <p className="text-Light-Text-Primary dark:text-Dark-Text-Primary Body1 !font-semibold truncate w-full">
               {email.name}
             </p>
-            <p className="Body2 truncate block ">{email.jobTitle}</p>
+            <p className="Body2 block truncate w-full">{email.jobTitle}</p>
           </div>
           <div className={`sm:w-2 sm:h-2 ${DotColor} rounded-full`}></div>
           <div className="Caption min-w-fit">{email.time}</div>
@@ -47,7 +46,7 @@ const Emails = ({ emails }) => {
   };
 
   return (
-    <div className="overflow-auto flex flex-col max-h-[442px]">
+    <div className="overflow-auto flex flex-col sm:max-h-[442px] wax-h-full">
       {EmilComponent()}
     </div>
   );
