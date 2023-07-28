@@ -1,9 +1,9 @@
 const avatars = [
   "../../src/assets/Imgs/avater/Avatar.png",
-  "../../src/assets/Imgs/avater/4.png",
-  "../../src/assets/Imgs/avater/5.png",
-  "../../src/assets/Imgs/avater/8.png",
-  "../../src/assets/Imgs/avater/2.png",
+  "../../src/assets/Imgs/avater/Three.png",
+  "../../src/assets/Imgs/avater/four.png",
+  "../../src/assets/Imgs/avater/five.png",
+  "../../src/assets/Imgs/avater/Two.png",
 ];
 
 const fakeemails = [
