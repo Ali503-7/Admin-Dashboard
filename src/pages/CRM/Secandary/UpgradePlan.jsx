@@ -3,7 +3,7 @@ import Dots from "../../../components/Geniral/Dots";
 import { ThemeContext } from "../../../App";
 import Bag from "../../../assets/Imgs/Bag.png";
 import Bank1 from "../../../assets/Imgs/Logo/logo-mastercard-small.png";
-import Bank2 from "../../../assets/Imgs/Logo/logo-credit-card-Two.png";
+import Bank2 from "../../../assets/Imgs/Logo/logo-credit-card-2.png";
 
 const UpgradePlan = () => {
   const { dark } = useContext(ThemeContext);
