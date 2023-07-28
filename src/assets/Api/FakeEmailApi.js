@@ -1,10 +1,10 @@
-const avatars = [
-  "../../src/assets/Imgs/avater/Avatar.png",
-  "../../src/assets/Imgs/avater/Three.png",
-  "../../src/assets/Imgs/avater/four.png",
-  "../../src/assets/Imgs/avater/five.png",
-  "../../src/assets/Imgs/avater/Two.png",
-];
+import One from "../Imgs/avater/Avatar.png";
+import Two from "../Imgs/avater/Three.png";
+import Three from "../Imgs/avater/four.png";
+import Four from "../Imgs/avater/five.png";
+import Six from "../Imgs/avater/five.png";
+
+const avatars = [One, Two, Three, Four, Six];
 
 const fakeemails = [
   {
