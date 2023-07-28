@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../../App";
-import Man from "../../../assets/Imgs/pose_m18.png";
+import Man from "../../../assets/Imgs/pose_m1five.png";
 
 const Section = () => {
   const { dark } = useContext(ThemeContext);

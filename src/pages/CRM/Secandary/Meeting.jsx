@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import Dots from "../../../components/Geniral/Dots";
 import { ThemeContext } from "../../../App";
 import { BsCalendar } from "react-icons/bs";
-import img1 from "../../../assets/Imgs/avater/2.png";
-import img2 from "../../../assets/Imgs/avater/4.png";
-import img3 from "../../../assets/Imgs/avater/5.png";
-import img4 from "../../../assets/Imgs/avater/8.png";
+import img1 from "../../../assets/Imgs/avater/Two.png";
+import img2 from "../../../assets/Imgs/avater/Three.png";
+import img3 from "../../../assets/Imgs/avater/four.png";
+import img4 from "../../../assets/Imgs/avater/five.png";
 import img5 from "../../../assets/Imgs/avater/Avatar.png";
-import img6 from "../../../assets/Imgs/avater/5.png";
+import img6 from "../../../assets/Imgs/avater/four.png";
 
 const Meeting = () => {
   const { dark } = useContext(ThemeContext);

@@ -1,10 +1,10 @@
 import { FaRegBell } from "react-icons/fa";
 import { ThemeContext } from "../../App";
 import { useContext, useState } from "react";
-import Av1 from "../../assets/Imgs/avater/2.png";
-import Av2 from "../../assets/Imgs/avater/4.png";
-import Av3 from "../../assets/Imgs/avater/5.png";
-import Av4 from "../../assets/Imgs/avater/8.png";
+import Av1 from "../../assets/Imgs/avater/Two.png";
+import Av2 from "../../assets/Imgs/avater/Three.png";
+import Av3 from "../../assets/Imgs/avater/four.png";
+import Av4 from "../../assets/Imgs/avater/five.png";
 import PayPal from "../../assets/Imgs/Logo/paypal.png";
 import Finance from "../../assets/Imgs/Logo/chart.png";
 
