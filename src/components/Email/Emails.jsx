@@ -2,6 +2,9 @@ import { AiOutlineStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Emails = ({ emails }) => {
+
+  
+
   const EmilComponent = () => {
     return emails.map((email) => {
       let DotColor = "";
@@ -18,12 +21,17 @@ const Emails = ({ emails }) => {
             "bg-Light-Action-Hover dark:bg-Dark-Action-Hover"
           }`}
         >
-          <Link to={email.id} className="absolute w-full h-full left-0 top-0 right-0 bottom-0 z-10"></Link>
+          <Link
+            to={email.id}
+            className="absolute w-full h-full left-0 top-0 right-0 bottom-0 z-10"
+          ></Link>
           <div className="w-fit z-20">
             <input type="checkbox" name="" id="" />
           </div>
           <div className="w-fit z-20">
-            <AiOutlineStar className="w-6 h-6 hidden sm:block" />
+            <AiOutlineStar
+              className={`w-6 h-6 hidden sm:block ${email.starred && "text-Light-Main-Warning dark:text-Light-Main-Warning"}`}
+            />
           </div>
           <div className="w-fit z-20">
             <img
