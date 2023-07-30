@@ -64,7 +64,7 @@ const Nav = ({ scrollTop, setAside }) => {
           <Dark />
           <Shortcut state={shortcut} />
           <Notification state={notification} />
-          <Profile state={profile} />
+          <Profile state={profile} setStates={setStates} />
         </div>
       </div>
     </div>

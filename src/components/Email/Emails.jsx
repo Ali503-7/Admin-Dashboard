@@ -1,12 +1,12 @@
 import { AiOutlineStar } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 
-const Emails = ({ emails }) => {
+const Emails = () => {
 
-  
+  const fillterd = useOutletContext();
 
   const EmilComponent = () => {
-    return emails.map((email) => {
+    return fillterd[0].map((email) => {
       let DotColor = "";
       if (email.type === "Personal") DotColor = "bg-Light-Main-Success";
       if (email.type === "Company") DotColor = "bg-Light-Main-Primary";
@@ -30,7 +30,10 @@ const Emails = ({ emails }) => {
           </div>
           <div className="w-fit z-20">
             <AiOutlineStar
-              className={`w-6 h-6 hidden sm:block ${email.starred && "text-Light-Main-Warning dark:text-Light-Main-Warning"}`}
+              className={`w-6 h-6 hidden sm:block ${
+                email.starred &&
+                "text-Light-Main-Warning dark:text-Light-Main-Warning"
+              }`}
             />
           </div>
           <div className="w-fit z-20">

@@ -1,12 +1,10 @@
-import { useState } from "react"
-import fakeEmails from "../../assets/Api/FakeEmailApi"
 import Emails from "../../components/Email/Emails";
 import EmailSearch from "../../components/Email/EmailSearch";
 
 
 {/* here will create the body of the email shearch and filter */}
 const EmailMain = () => {
-  const [emails, setEmails] = useState(fakeEmails)
+    
 
   return (
     <div className="relative w-full">
@@ -16,11 +14,11 @@ const EmailMain = () => {
       <div>
         {/* Search Bar */}
 
-        <EmailSearch emails={emails} setEmails={setEmails} />
+        <EmailSearch  />
 
         {/* Emails */}
 
-        <Emails emails={emails} setEmails={setEmails} />
+        <Emails  />
       </div>
     </div>
   );

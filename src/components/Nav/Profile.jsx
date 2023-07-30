@@ -11,19 +11,27 @@ import { MdLogout } from "react-icons/md";
 import { BsChatLeft } from "react-icons/bs";
 
 // eslint-disable-next-line react/prop-types
-const Profile = ({ state }) => {
+const Profile = ({ state, setStates }) => {
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+
+    setStates((prevState) => ({
+      ...prevState,
+      profile: !prevState.profile,
+    }));
+  };
+
   return (
     <div data-value="profile" className="relative">
       <div>
         <img
-        src={User}
-        alt="Avatar"
-        className="w-10 h-10 m-2 rounded-full cursor-pointer"
-        data-value="profile"
+          src={User}
+          alt="Avatar"
+          className="w-10 h-10 m-2 rounded-full cursor-pointer"
+          data-value="profile"
         />
         <div className="w-2 h-2 bg-Light-Main-Success dark:bg-Dark-Main-Success absolute rounded-full outline outline-Light-Other-Paper_Card dark:outline-Dark-Other-Paper_Card bottom-3 right-2"></div>
       </div>
-      
 
       {/* Start the list */}
 
@@ -40,8 +48,7 @@ const Profile = ({ state }) => {
                 alt="User"
                 className="w-10 h-10 m-2 rounded-full cursor-pointer"
               />
-              <div className="w-2 h-2 bg-Light-Main-Success dark:bg-Dark-Main-Success absolute rounded-full outline outline-Light-Other-Paper_Card dark:outline-Dark-Other-Paper_Card bottom-3 right-2">
-              </div>
+              <div className="w-2 h-2 bg-Light-Main-Success dark:bg-Dark-Main-Success absolute rounded-full outline outline-Light-Other-Paper_Card dark:outline-Dark-Other-Paper_Card bottom-3 right-2"></div>
             </div>
             <div className="">
               <p className="Body2 text-Light-Text-Primary dark:text-Dark-Text-Primary">
@@ -54,15 +61,27 @@ const Profile = ({ state }) => {
           </div>
           <div className="border-b border-Light-Other-Divider dark:border-Dark-Other-Divider">
             <ul>
-              <Link className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary flex items-center gap-2 pl-2 hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover py-1">
-                <FaRegUser />
-                Profile
-              </Link>
-              <Link className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary flex items-center gap-2 pl-2 hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover py-1">
-                <FaRegEnvelope />
-                inbox
-              </Link>
-              <Link className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary flex items-center gap-2 pl-2 hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover py-1">
+              <li onClick={handleLinkClick}>
+                <Link className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary flex items-center gap-2 pl-2 hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover py-1">
+                  <FaRegUser />
+                  Profile
+                </Link>
+              </li>
+
+              <li onClick={handleLinkClick}>
+                <Link
+                  to="/email?type=Inbox"
+                  className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary flex items-center gap-2 pl-2 hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover py-1"
+                >
+                  <FaRegEnvelope />
+                  inbox
+                </Link>
+              </li>
+
+              <Link
+                onClick={handleLinkClick}
+                className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary flex items-center gap-2 pl-2 hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover py-1"
+              >
                 <BsChatLeft />
                 Chat
               </Link>
@@ -70,7 +89,10 @@ const Profile = ({ state }) => {
           </div>
           <div className="border-b border-Light-Other-Divider dark:border-Dark-Other-Divider">
             <ul>
-              <Link className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary flex items-center gap-2 pl-2 hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover py-1">
+              <Link
+                onClick={handleLinkClick}
+                className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary flex items-center gap-2 pl-2 hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover py-1"
+              >
                 <FiSettings />
                 Settings
               </Link>

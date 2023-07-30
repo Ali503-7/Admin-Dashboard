@@ -6,6 +6,7 @@ import CRM from "./pages/CRM/Primary/CRM";
 import Analytics from "./pages/Analytics/Primary/Analytics";
 import EmailLayout from "./Layout/EmailLayout";
 import EmailMain from "./pages/Email/EmailMain";
+import ShowEmail from "./pages/Email/ShowEmail";
 
 export const ThemeContext = createContext();
 
@@ -28,16 +29,16 @@ export function App() {
           element: <EmailLayout />,
           children: [
             {
-              index: true,
               element: <EmailMain />,
-              path: "/Email"
+              path: "/email",
             },
-            // {
-            //   element: <ShowEmail />,
-            //   path: "/:id"
-            // }
-          ]
-        }
+            {
+              index: true,
+              element: <ShowEmail />,
+              path: "email/:id",
+            },
+          ],
+        },
       ],
     },
   ]);

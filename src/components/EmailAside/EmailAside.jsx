@@ -1,17 +1,14 @@
-import { useSearchParams } from "react-router-dom";
+import { useOutletContext, useSearchParams } from "react-router-dom";
 import { BiEnvelope } from "react-icons/bi";
 import { IoSendSharp } from "react-icons/io5";
 import { RiBallPenLine } from "react-icons/ri";
 import { AiOutlineStar, AiOutlineExclamationCircle } from "react-icons/ai";
 import { IoMdTrash } from "react-icons/io";
 import { useContext } from "react";
-import {ThemeContext} from '../../App'
+import { ThemeContext } from "../../App";
 // here will create the email page aside
-const EmailAside = () => {
-  const { dark } = useContext(ThemeContext)
-
-  const [searchParams, setSearchParams] = useSearchParams();
-  const typeFilter = searchParams.get("type");
+const EmailAside = ({ searchParams, setSearchParams }) => {
+  const { dark } = useContext(ThemeContext);
 
   const HandelFilter = (text) => {
     if (text && text.target && text.target.getAttribute("data-key")) {
@@ -71,24 +68,26 @@ const EmailAside = () => {
   };
 
   const WithIcons = (array) => {
-    
     return array.map((item, index) => {
       let NumStyle = "";
-      if (item.num == "21") NumStyle = `${
-        dark
-          ? "Dark_Bg_Primary text-Dark-Main-Primary"
-          : "Bg_Custom_primary text-Light-Main-Primary"
-      }`;
-      if (item.num == "1") NumStyle = `${
-        dark
-          ? "Dark_Custom_Warning text-Dark-Main-Warning"
-          : "text-Light-Main-Warning Bg_Custom_Warning"
-      }`;
-      if (item.num == "6") NumStyle = `${
-        dark
-          ? "Dark_Custom_Error text-Dark-Main-Error"
-          : "text-Light-Main-Error Bg_Custom_Error"
-      }`;
+      if (item.num == "21")
+        NumStyle = `${
+          dark
+            ? "Dark_Bg_Primary text-Dark-Main-Primary"
+            : "Bg_Custom_primary text-Light-Main-Primary"
+        }`;
+      if (item.num == "1")
+        NumStyle = `${
+          dark
+            ? "Dark_Custom_Warning text-Dark-Main-Warning"
+            : "text-Light-Main-Warning Bg_Custom_Warning"
+        }`;
+      if (item.num == "6")
+        NumStyle = `${
+          dark
+            ? "Dark_Custom_Error text-Dark-Main-Error"
+            : "text-Light-Main-Error Bg_Custom_Error"
+        }`;
       return (
         <div
           onClick={(data) => HandelFilter(data)}
@@ -108,7 +107,11 @@ const EmailAside = () => {
             </p>
           </div>
           {item.num && (
-            <span className={`Baldge-Label ${NumStyle} px-[6.5px] rounded-full` }>{item.num}</span>
+            <span
+              className={`Baldge-Label ${NumStyle} px-[6.5px] rounded-full`}
+            >
+              {item.num}
+            </span>
           )}
         </div>
       );
@@ -133,8 +136,8 @@ const EmailAside = () => {
           ></div>
         </div>
       );
-    })
-  }
+    });
+  };
 
   return (
     <div className="xl:min-w-[260px] xl:translate-x-0 translate-x-full overflow-hidden w-0 ">
@@ -143,12 +146,16 @@ const EmailAside = () => {
           Compose
         </button>
       </div>
-      <div className="flex flex-col py-[10px] gap-1">{WithIcons(Buttons.first)}</div>
+      <div className="flex flex-col py-[10px] gap-1">
+        {WithIcons(Buttons.first)}
+      </div>
       <div className="p-5">
         <div className="Caption text-Light-Text-Disabled dark:text-Dark-Text-Primary mb-1">
           LABELS
         </div>
-        <div className="flex flex-col gap-1">{WithoutIcons(Buttons.secend)}</div>
+        <div className="flex flex-col gap-1">
+          {WithoutIcons(Buttons.secend)}
+        </div>
       </div>
     </div>
   );
