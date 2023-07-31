@@ -57,7 +57,7 @@ const Emails = () => {
   };
 
   return (
-    <div className="overflow-auto flex flex-col sm:max-h-[65vh] wax-h-full">
+    <div className="overflow-auto flex flex-col sm:h-[65vh] wax-h-full">
       {EmilComponent()}
     </div>
   );

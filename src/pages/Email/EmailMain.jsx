@@ -1,10 +1,11 @@
+import { useOutletContext } from "react-router-dom";
 import Emails from "../../components/Email/Emails";
 import EmailSearch from "../../components/Email/EmailSearch";
 
 
 {/* here will create the body of the email shearch and filter */}
 const EmailMain = () => {
-    
+  const [fillteredData, setFillterd] = useOutletContext();
 
   return (
     <div className="relative w-full">
@@ -14,11 +15,11 @@ const EmailMain = () => {
       <div>
         {/* Search Bar */}
 
-        <EmailSearch  />
+        <EmailSearch fillteredData={fillteredData} setFillterd={setFillterd} />
 
         {/* Emails */}
 
-        <Emails  />
+        <Emails />
       </div>
     </div>
   );

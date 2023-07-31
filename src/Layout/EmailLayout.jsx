@@ -20,12 +20,11 @@ const EmailLayout = () => {
           massage.type === typeFilter 
       )
     );
+    if (!typeFilter || typeFilter == "Inbox") {
+      return setFillterd(emails);
+    }
   }, [typeFilter]);
   
-  if (fillterd.length == 0) {
-    setFillterd(emails);
-  }
-  console.log(fillterd)
 
   return (
     <div className="bg-white rounded-md w-full dark:bg-Dark-Other-Paper_Card flex overflow-hidden">
@@ -37,7 +36,7 @@ const EmailLayout = () => {
         searchParams={searchParams}
         setSearchParams={setSearchParams}
       />
-      <Outlet context={[fillterd]} />
+      <Outlet context={[fillterd, setFillterd]} />
     </div>
   );
 };
