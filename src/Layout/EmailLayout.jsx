@@ -7,10 +7,12 @@ import fakeEmails from "../assets/Api/FakeEmailApi";
 const EmailLayout = () => {
   const [aside, setAside] = useState(false);
   const [emails, setEmails] = useState(fakeEmails);
-  const [searchParams, setSearchParams] = useSearchParams();
   const [fillterd, setFillterd] = useState([]);
+  
 
+  const [searchParams, setSearchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
+  
   // filltring the massages
   useEffect(() => {
     setFillterd(
@@ -36,7 +38,7 @@ const EmailLayout = () => {
         searchParams={searchParams}
         setSearchParams={setSearchParams}
       />
-      <Outlet context={[fillterd, setFillterd]} />
+      <Outlet context={[fillterd, setFillterd, emails]} />
     </div>
   );
 };

@@ -1,12 +1,19 @@
 import { AiOutlineStar } from "react-icons/ai";
 import { Link, useOutletContext } from "react-router-dom";
 
-const Emails = () => {
+const Emails = ({ searchFillter, typing }) => {
+  const [fillterd] = useOutletContext();
 
-  const fillterd = useOutletContext();
+  const data = () => {
+    if (searchFillter.length < fillterd.length && typing != 0) {
+      return searchFillter ;
+    } else {
+      return fillterd ;
+    }
+  };
 
   const EmilComponent = () => {
-    return fillterd[0].map((email) => {
+    return data().map((email) => {
       let DotColor = "";
       if (email.type === "Personal") DotColor = "bg-Light-Main-Success";
       if (email.type === "Company") DotColor = "bg-Light-Main-Primary";

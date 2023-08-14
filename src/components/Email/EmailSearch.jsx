@@ -1,26 +1,38 @@
 import React, { useState, useEffect } from "react";
-import {AiOutlineSearch} from 'react-icons/ai'
+import { AiOutlineSearch } from "react-icons/ai";
+import { useSearchParams } from "react-router-dom";
 
-const EmailSearch = ({fillteredData, setFillterd }) => {
+const EmailSearch = ({
+  setSearchFillter,
+  fillteredData,
+  setTyping,
+  typing,
+}) => {
   const [searchInput, setSearchInput] = useState("");
+  const [searchParams] = useSearchParams();
+  const typeFilter = searchParams.get("type");
+
+  const handleSearch = (value) => {
+    setSearchInput(value);
+  };
 
   useEffect(() => {
-    // Perform the search whenever the searchInput or data changes
-    const lookFor = searchInput.toLowerCase();
-
-    // If there is no search input, display all the data
-    if (!lookFor) {
-      setFillterd(fillteredData);
-    } else {
-      // Filter the data based on the search input (case-insensitive)
-      const filteredMails = fillteredData.filter((email) => {
-        const emailName = email.name.toLowerCase();
-        return emailName.includes(lookFor);
-      });
-
-      setFillterd(filteredMails);
+    if (searchInput == "") {
+      setTyping(0);
+      setSearchFillter(fillteredData);
+      return;
     }
-  }, [searchInput, fillteredData]);
+    setTyping((prev) => (prev += 1));
+    setSearchFillter(
+      fillteredData.filter((massages) => {
+        return massages.name.toLowerCase().includes(searchInput.toLowerCase());
+      })
+    );
+  }, [searchInput]);
+
+  useEffect(() => {
+    setSearchInput("")
+  }, [typeFilter])
 
   return (
     <div className="w-full py-4 px-5 flex flex-row items-center gap-3 text-Light-Text-Disabled dark:text-Dark-Text-Primary border-b-[1px] dark:border-b-Dark-Other-Divider border-b-Light-Other-Divider">
@@ -30,7 +42,7 @@ const EmailSearch = ({fillteredData, setFillterd }) => {
         placeholder="Search mail"
         className="w-full text-Light-Text-Primary dark:text-Dark-Text-Primary bg-transparent outline-none placeholder-Light-Text-Disabled dark:placeholder-Dark-Text-Primary Body1"
         value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
+        onChange={(e) => handleSearch(e.target.value)}
       />
     </div>
   );
