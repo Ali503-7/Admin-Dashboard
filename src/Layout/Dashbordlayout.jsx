@@ -4,28 +4,11 @@ import { ThemeContext } from "../App";
 import Nav from "../components/Nav/Nav";
 import Aside from "../components/Aside/Aside";
 import Footer from "../components/Footer";
+import { scrollAtom } from "../atoms";
 
 const Dashbordlayout = () => {
   const { dark } = useContext(ThemeContext);
-  const [scrollTop, setScrollTop] = useState(0);
   const [aside, setAside] = useState(false);
-
-  // Detact Page Scrolling
-
-  useEffect(() => {
-    const handleScroll = (event) => {
-      setScrollTop(window.scrollY);
-    };
-    setScrollTop(window.scrollY);
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Detact aside Toggling
 
   return (
     <div className={dark ? "dark" : ""}>
@@ -48,7 +31,7 @@ const Dashbordlayout = () => {
 
           <div className="grid grid-rows-[auto,1fr,auto] container max-w-[1370px] relative">
             <header className="z-50 sticky top-0">
-              <Nav scrollTop={scrollTop} aside={aside} setAside={setAside} />
+              <Nav aside={aside} setAside={setAside} />
             </header>
             <main className="h-full p-6">
               <Outlet />

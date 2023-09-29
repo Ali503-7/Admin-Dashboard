@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Lang from "./Lang";
 import Dark from "./Dark";
 import Shortcut from "./Shorcut";
@@ -6,8 +6,22 @@ import Notification from "./Notifcation";
 import Profile from "./Profile";
 import Search from "./Search";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { scrollAtom } from "../../atoms";
 
-const Nav = ({ scrollTop, setAside }) => {
+const Nav = ({ setAside }) => {
+
+  const scrollTop = scrollAtom.useValue();
+
+  useEffect(() => {
+    const handleScroll = () => scrollAtom.update(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("DOMContentLoaded", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("DOMContentLoaded", handleScroll);
+    };
+  }, []);
+
   // Initialize the states using the useState hook
   const [states, setStates] = useState({
     lang: false,
