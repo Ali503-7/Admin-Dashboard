@@ -1,5 +1,5 @@
-import { NavLink, useLocation } from "react-router-dom";
-import { useState, useEffect, useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
 import { BiEnvelope } from "react-icons/bi";
 import { BsChatLeft } from "react-icons/bs";
 import { AiOutlineCalendar } from "react-icons/ai";
@@ -8,43 +8,34 @@ import Invoice from "./Invoice/Invoice";
 import { ThemeContext } from "../../../App";
 
 const Apps = ({ setAside }) => {
-  const {dark} = useContext(ThemeContext)
-  const location = useLocation();
-
-  const [activeState, setActiveState] = useState(null);
-
-  useEffect(() => {
-    const currentPath = location.pathname;
-    const lastPath = currentPath.substring(currentPath.lastIndexOf("/") + 1);
-    setAside((prev) => !prev);
-    setActiveState(lastPath);
-  }, [location]);
+  const { dark } = useContext(ThemeContext);
 
   return (
     <div className="flex flex-col Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary py-2">
       <NavLink
         to="/email"
-        className={`NavLink !gap-3 ${
-          activeState === "email"
-            ? dark
-              ? "shadow-Dark_3 Dark_Bg_Active_Menu"
-              : "Bg_Custom_Active_menu shadow-Light_3 text-white"
-            : ""
-        }`}
-        onClick={() => setActiveState("email")}
+        className={({ isActive }) =>
+        isActive
+          ? dark
+            ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+            : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+          : `NavLink`
+      }
       >
-        <BiEnvelope />
+        <div className={` `}>
+          <BiEnvelope />
+        </div>
         Email
       </NavLink>
       <NavLink
         to="/chat"
-        className={`NavLink !gap-3 ${
-          activeState === "chat"
-            ? dark
-              ? "shadow-Dark_3 Dark_Bg_Active_Menu"
-              : "Bg_Custom_Active_menu shadow-Light_3 text-white"
-            : ""
-        }`}
+        className={({ isActive }) =>
+        isActive
+          ? dark
+            ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+            : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+          : `NavLink`
+      }
         onClick={() => setActiveState("chat")}
       >
         <BsChatLeft />
@@ -52,14 +43,13 @@ const Apps = ({ setAside }) => {
       </NavLink>
       <NavLink
         to="/calendar"
-        className={`NavLink !gap-3 ${
-          activeState === "calendar"
-            ? dark
-              ? "shadow-Dark_3 Dark_Bg_Active_Menu"
-              : "Bg_Custom_Active_menu shadow-Light_3 text-white"
-            : ""
-        }`}
-        onClick={() => setActiveState("calendar")}
+        className={({ isActive }) =>
+        isActive
+          ? dark
+            ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+            : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+          : `NavLink`
+      }
       >
         <AiOutlineCalendar />
         Calendar
@@ -69,14 +59,13 @@ const Apps = ({ setAside }) => {
       {/*  */}
       <NavLink
         to="/dialog-examples"
-        className={`NavLink !gap-3 ${
-          activeState === "dialog-examples"
-            ? dark
-              ? "shadow-Dark_3 Dark_Bg_Active_Menu"
-              : "Bg_Custom_Active_menu shadow-Light_3 text-white"
-            : ""
-        }`}
-        onClick={() => setActiveState("dialog-examples")}
+        className={({ isActive }) =>
+        isActive
+          ? dark
+            ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+            : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+          : `NavLink`
+      }
       >
         <MdContentCopy />
         <p className="truncate">Dialog Examples</p>

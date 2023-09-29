@@ -27,15 +27,15 @@ export function App() {
         },
         {
           element: <EmailLayout />,
+          path:"email" ,
           children: [
             {
               element: <EmailMain />,
-              path: "/email",
+              index: true
             },
             {
-              index: true,
               element: <ShowEmail />,
-              path: "email/:id",
+              path: ":id",
             },
           ],
         },

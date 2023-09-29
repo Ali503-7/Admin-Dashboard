@@ -1,22 +1,12 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { BiHome } from "react-icons/bi";
 import { FaChevronDown } from "react-icons/fa";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../../App";
 
 const Dashboards = () => {
   const { dark } = useContext(ThemeContext);
   const [dash, setDash] = useState(true);
-  const location = useLocation();
-
-  const [activeState, setActiveState] = useState(null);
-
-  useEffect(() => {
-    const currentPath = location.pathname;
-    const lastPath = currentPath.substring(currentPath.lastIndexOf("/") + 1);
-
-    setActiveState(lastPath);
-  }, [location.pathname]);
 
   return (
     <div className="Body1 text-Light-Text-Primary dark:text-Dark-Text-Primary">
@@ -45,22 +35,15 @@ const Dashboards = () => {
         <li>
           <NavLink
             to="/CRM"
-            className={`NavLink flex flex-row items-center gap-4 py-2 pr-[14px] pl-[22px] rounded-r-full hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover ${
-              activeState === "CRM"
+            className={({ isActive }) =>
+              isActive
                 ? dark
-                  ? "shadow-Dark_3 Dark_Bg_Active_Menu"
-                  : "Bg_Custom_Active_menu shadow-Light_3 text-white"
-                : ""
-            }`}
-            onClick={() => setActiveState("CRM")}
+                  ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+                  : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+                : `NavLink`
+            }
           >
-            <div
-              className={`w-[12px] h-[12px] border rounded-full ${
-                dark
-                  ? "dark:border-Dark-Text-Primary"
-                  : "border-Light-Text-Primary"
-              } ${activeState === "CRM" ? "border-white" : ""}`}
-            ></div>
+            <div></div>
             CRM
           </NavLink>
         </li>
@@ -68,22 +51,15 @@ const Dashboards = () => {
         <li>
           <NavLink
             to="/"
-            className={`NavLink flex flex-row items-center gap-4 py-2 pr-[14px] pl-[22px] rounded-r-full hover:bg-Light-Action-Hover dark:hover:bg-Dark-Action-Hover ${
-              activeState === ""
+            className={({ isActive }) =>
+              isActive
                 ? dark
-                  ? "shadow-Dark_3 Dark_Bg_Active_Menu"
-                  : "Bg_Custom_Active_menu shadow-Light_3 text-white"
-                : ""
-            }`}
-            onClick={() => setActiveState("")}
+                  ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+                  : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+                : `NavLink`
+            }
           >
-            <div
-              className={`w-[12px] h-[12px] border rounded-full ${
-                dark
-                  ? "dark:border-Dark-Text-Primary"
-                  : "border-Light-Text-Primary"
-              } ${activeState === "" ? "border-white" : ""}`}
-            ></div>
+            <div></div>
             Analytics
           </NavLink>
         </li>

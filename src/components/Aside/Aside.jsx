@@ -18,7 +18,7 @@ const Aside = ({ setAside, aside }) => {
         >
           x
         </p>
-        <input type="radio" name="" id="" className="hidden xl:block" />
+        <input type="radio" className="hidden xl:block" />
       </div>
       <div className="pr-[18px]">
         <Dashboards setAside={setAside} aside={aside} />
