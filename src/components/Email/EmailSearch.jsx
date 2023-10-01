@@ -6,7 +6,6 @@ const EmailSearch = ({
   setSearchFillter,
   fillteredData,
   setTyping,
-  typing,
 }) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchParams] = useSearchParams();

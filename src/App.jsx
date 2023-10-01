@@ -6,7 +6,7 @@ import CRM from "./pages/CRM/Primary/CRM";
 import Analytics from "./pages/Analytics/Primary/Analytics";
 import EmailLayout from "./Layout/EmailLayout";
 import EmailMain from "./pages/Email/EmailMain";
-import ShowEmail from "./pages/Email/ShowEmail";
+import ShowEmail from "./pages/Email/ShowEmail/ShowEmail";
 
 export const ThemeContext = createContext();
 
