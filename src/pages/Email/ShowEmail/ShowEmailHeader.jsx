@@ -73,7 +73,7 @@ const ShowEmailHeader = ({ id }) => {
             <SlArrowLeft className="text-black dark:text-Dark-Main-Secondary" />
           </Link>
         )}
-        {getNextId() === null ? (
+        {getNextId() ? (
           <div className="w-4"></div>
         ) : (
           <Link to={`../../email/${getNextId()}`}>

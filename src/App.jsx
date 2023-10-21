@@ -18,7 +18,6 @@ export function App() {
         {
           element: <CRM />,
           path: "/CRM",
-          index: true,
         },
         {
           element: <Analytics />,
@@ -27,11 +26,11 @@ export function App() {
         },
         {
           element: <EmailLayout />,
-          path:"email" ,
+          path: "email",
           children: [
             {
               element: <EmailList />,
-              index: true
+              index: true,
             },
             {
               element: <ShowEmail />,
