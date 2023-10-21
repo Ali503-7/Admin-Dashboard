@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 {/* here will create the body of the email search and filter */}
-const EmailMain = () => {
+const EmailList = () => {
   const [fillteredData] = useOutletContext();
   const [searchFillter, setSearchFillter] = useState([])
   const [typing, setTyping] = useState(0)
@@ -32,4 +32,4 @@ const EmailMain = () => {
   );
 }
 
-export default EmailMain
+export default EmailList

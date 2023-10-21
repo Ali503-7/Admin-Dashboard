@@ -4,7 +4,7 @@ import { ThemeContext } from "../App";
 import Nav from "../components/Nav/Nav";
 import Aside from "../components/Aside/Aside";
 import Footer from "../components/Footer";
-import { scrollAtom } from "../atoms";
+import { scrollAtom } from "../atoms/ScrollAtom";
 
 const Dashbordlayout = () => {
   const { dark } = useContext(ThemeContext);

@@ -6,7 +6,7 @@ import Notification from "./Notifcation";
 import Profile from "./Profile";
 import Search from "./Search";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { scrollAtom } from "../../atoms";
+import { scrollAtom } from "../../atoms/ScrollAtom";
 
 const Nav = ({ setAside }) => {
 

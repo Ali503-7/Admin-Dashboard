@@ -1,4 +1,3 @@
-import { useOutletContext, useSearchParams } from "react-router-dom";
 import { BiEnvelope } from "react-icons/bi";
 import { IoSendSharp } from "react-icons/io5";
 import { RiBallPenLine } from "react-icons/ri";
@@ -6,13 +5,18 @@ import { AiOutlineStar, AiOutlineExclamationCircle } from "react-icons/ai";
 import { IoMdTrash } from "react-icons/io";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
+import { EmailFilterAtom } from "../../atoms/EmailAtomFilter";
+import { useSearchParams } from "react-router-dom";
 // here will create the email page aside
-const EmailAside = ({ searchParams, setSearchParams }) => {
+const EmailAside = () => {
   const { dark } = useContext(ThemeContext);
+  const [filter, setFilter] = EmailFilterAtom.useState();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const HandelFilter = (text) => {
     if (text && text.target && text.target.getAttribute("data-key")) {
       const filterType = text.target.getAttribute("data-key");
+      setFilter(filterType);
       setSearchParams({ type: filterType });
     }
   };
@@ -47,7 +51,7 @@ const EmailAside = ({ searchParams, setSearchParams }) => {
         icon: <IoMdTrash />,
       },
     ],
-    secend: [
+    second: [
       {
         color: "Light-Main-Success",
         p: "Personal",
@@ -154,7 +158,7 @@ const EmailAside = ({ searchParams, setSearchParams }) => {
           LABELS
         </div>
         <div className="flex flex-col gap-1">
-          {WithoutIcons(Buttons.secend)}
+          {WithoutIcons(Buttons.second)}
         </div>
       </div>
     </div>

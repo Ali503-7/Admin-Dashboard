@@ -1,27 +1,39 @@
+import React from "react";
 import { useContext } from "react";
 import { SlArrowLeft } from "react-icons/sl";
 import { ThemeContext } from "../../../App";
-import fakeemails from "../../../assets/Api/FakeEmailApi";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { EmailFilterAtom } from "../../../atoms/EmailAtomFilter";
+import useMessages from "../../../functions/useMassages";
 
-const ShowEmailHeader = ({ massage, id }) => {
+const ShowEmailHeader = ({ id }) => {
   const { dark } = useContext(ThemeContext);
+  const typeFilter = EmailFilterAtom.useValue();
+  const massages = useMessages(typeFilter);
 
-  const location = useLocation();
-  const navigate = useNavigate();
+  // Check if massage with the given 'id' exists
+  const massage = massages.find((email) => email.id === id);
 
-  const getPreviousUrlWithFilters = () => {
-    const currentSearchParams = new URLSearchParams(location.search);
-    const previousPath = location.pathname;
-    const newURL = `${previousPath}?${currentSearchParams.toString()}`;
-    return newURL;
+  if (!massage) {
+    // Handle the case where the email with 'id' is not found.
+    return (
+      <div className="flex flex-row justify-between py-4 px-5">
+        <div>No email found with the provided ID.</div>
+      </div>
+    );
+  }
+
+  const getNextId = () => {
+    let nextIndex = massages.map((item) => item.id).indexOf(massage.id) + 1;
+    if (nextIndex >= massages.length || !massages[nextIndex]) return null;
+    return massages[nextIndex].id;
   };
 
-  const handleGoBack = () => {
-    const previousUrl = getPreviousUrlWithFilters();
-    navigate(previousUrl);
+  const getPrevId = () => {
+    let prevIndex = massages.map((item) => item.id).indexOf(massage.id) - 1;
+    if (prevIndex < 0 || !massages[prevIndex]) return null;
+    return massages[prevIndex].id;
   };
-
 
   let DotColor;
   if (massage.type === "Personal")
@@ -44,9 +56,9 @@ const ShowEmailHeader = ({ massage, id }) => {
   return (
     <div className="flex flex-row justify-between py-4 px-5">
       <div className="flex items-center gap-5">
-        <Link to={handleGoBack} className="cursor-pointer">
-          <SlArrowLeft className="text-black dark:text-Dark-Main-Secondary " />
-        </Link>
+        <div className="cursor-pointer">
+          <SlArrowLeft className="text-black dark:text-Dark-Main-Secondary" />
+        </div>
         <p className="text-Light-Text-Primary dark:text-Dark-Text-Primary Body1">
           {massage.jobTitle}
         </p>
@@ -56,15 +68,15 @@ const ShowEmailHeader = ({ massage, id }) => {
       </div>
 
       <div className="flex gap-5">
-        {id == 1 ? null : (
-          <Link to={`../../email/${Number(id) - 1}`}>
+        {getPrevId() && (
+          <Link to={`../../email/${getPrevId()}`}>
             <SlArrowLeft className="text-black dark:text-Dark-Main-Secondary" />
           </Link>
         )}
-        {id == fakeemails.length ? (
+        {getNextId() === null ? (
           <div className="w-4"></div>
         ) : (
-          <Link to={`../../email/${Number(id) + 1}`}>
+          <Link to={`../../email/${getNextId()}`}>
             <SlArrowLeft className="rotate-180 text-black dark:text-Dark-Main-Secondary" />
           </Link>
         )}

@@ -5,10 +5,10 @@ const Emails = ({ searchFillter, typing }) => {
   const [fillterd] = useOutletContext();
 
   const data = () => {
-    if (searchFillter.length < fillterd.length && typing != 0) {
-      return searchFillter ;
+    if (searchFillter.length < fillterd.length && typing !== 0) {
+      return Array.isArray(searchFillter) ? searchFillter : [];
     } else {
-      return fillterd ;
+      return Array.isArray(fillterd) ? fillterd : [];
     }
   };
 
