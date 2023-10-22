@@ -6,16 +6,19 @@ import { IoMdTrash } from "react-icons/io";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
 import { EmailFilterAtom } from "../../atoms/EmailAtomFilter";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 // here will create the email page aside
 const EmailAside = () => {
   const { dark } = useContext(ThemeContext);
-  const [filter, setFilter] = EmailFilterAtom.useState();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setFilter] = EmailFilterAtom.useState();
+  const [, setSearchParams] = useSearchParams();
+  const navigate = useNavigate()
+
 
   const HandelFilter = (text) => {
     if (text && text.target && text.target.getAttribute("data-key")) {
       const filterType = text.target.getAttribute("data-key");
+      navigate("/email")
       setFilter(filterType);
       setSearchParams({ type: filterType });
     }

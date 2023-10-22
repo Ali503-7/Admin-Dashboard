@@ -147,10 +147,10 @@
     #9155fd;
 }
 .Bg_Custom_Active_menu {
-  background: linear-gradient(270deg, #9155FD 0%, #C6A7FE 100%);
+  background: linear-gradient(270deg, #9155fd 0%, #c6a7fe 100%);
 }
 .Dark_Bg_Active_Menu {
-  background: linear-gradient(270deg, #9155FD 0%, #C6A7FE 100%);
+  background: linear-gradient(270deg, #9155fd 0%, #c6a7fe 100%);
 }
 .Dark_Bg_Span {
   background: linear-gradient(
@@ -186,14 +186,29 @@
 }
 
 .Dark_Custom_Error {
-  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #F44336;
+  background: linear-gradient(
+      0deg,
+      rgba(49, 45, 75, 0.88) 0%,
+      rgba(49, 45, 75, 0.88) 100%
+    ),
+    #f44336;
 }
 
 .Dark_Custom_Warning {
-  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #FFB400;
+  background: linear-gradient(
+      0deg,
+      rgba(49, 45, 75, 0.88) 0%,
+      rgba(49, 45, 75, 0.88) 100%
+    ),
+    #ffb400;
 }
 .Dark_Bg_Info {
-  background: linear-gradient(0deg, rgba(49, 45, 75, 0.88) 0%, rgba(49, 45, 75, 0.88) 100%), #2196F3;
+  background: linear-gradient(
+      0deg,
+      rgba(49, 45, 75, 0.88) 0%,
+      rgba(49, 45, 75, 0.88) 100%
+    ),
+    #2196f3;
 }
 .Box {
   @apply bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card shadow-Light_6 dark:shadow-Dark_6 p-5 rounded-md relative;
@@ -250,3 +265,14 @@
   letter-spacing: 0.4px;
 }
 
+/* width */
+
+::-webkit-scrollbar-thumb {
+  background: #b09cf7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b76d6;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}

@@ -44,6 +44,9 @@ export function App() {
 
   const [dark, setDark] = useState(JSON.parse(localStorage.getItem("dark")));
 
+  // this line is for the body background yes we don't need it for any thing but the scrollbar track 
+  window.document.body.style.background = dark ? "#28243D" : "#F4F5FA"
+
   return (
     <ThemeContext.Provider value={{ dark, setDark }}>
       <RouterProvider router={routes} />

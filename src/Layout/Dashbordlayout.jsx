@@ -34,7 +34,7 @@ const Dashbordlayout = () => {
             <header className="z-50 sticky top-0">
               <Nav aside={aside} setAside={setAside} />
             </header>
-            <main className="h-full p-6">
+            <main className={`scrollbar-${dark ? 'dark' : 'light'} h-full p-6`}>
               <ScrollRestoration />
               <Outlet />
             </main>
