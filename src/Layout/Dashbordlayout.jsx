@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../App";
 import Nav from "../components/Nav/Nav";
@@ -8,6 +8,14 @@ import Footer from "../components/Footer";
 const Dashbordlayout = () => {
   const { dark } = useContext(ThemeContext);
   const [aside, setAside] = useState(false);
+
+  const location = useLocation();
+
+  // useEffect to listen for URL changes
+  useEffect(() => {
+    // The following callback will be executed whenever the URL changes
+    setAside(false)
+  }, [location]);
 
   return (
     <div className={dark ? "dark" : ""}>
@@ -34,7 +42,7 @@ const Dashbordlayout = () => {
             <header className="z-50 sticky top-0">
               <Nav aside={aside} setAside={setAside} />
             </header>
-            <main className={`scrollbar-${dark ? 'dark' : 'light'} h-full p-6`}>
+            <main className={`scrollbar-${dark ? "dark" : "light"} h-full p-6`}>
               <ScrollRestoration />
               <Outlet />
             </main>

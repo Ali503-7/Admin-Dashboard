@@ -4,7 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../../App";
 
-const Dashboards = () => {
+const Dashboards = ({setAside}) => {
   const { dark } = useContext(ThemeContext);
   const [dash, setDash] = useState(true);
 

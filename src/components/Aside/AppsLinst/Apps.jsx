@@ -7,7 +7,7 @@ import { MdContentCopy } from "react-icons/md";
 import Invoice from "./Invoice/Invoice";
 import { ThemeContext } from "../../../App";
 
-const Apps = ({ setAside }) => {
+const Apps = () => {
   const { dark } = useContext(ThemeContext);
 
   return (
