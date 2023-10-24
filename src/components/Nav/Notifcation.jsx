@@ -100,8 +100,10 @@ const Notification = ({ state }) => {
       {/* Start the List */}
 
       <div
-        className={`absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] top-8 rounded-md duration-500 transition-Maxheight overflow-hidden z-10 ${
-          state ? "w-[19em] max-h-[470px]" : "w-[0em] max-h-[0px]"
+        className={`absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] rounded-md duration-500 transition-Maxheight overflow-hidden z-10 ${
+          state
+            ? "w-[312px] max-h-[470px] top-[50px] right-[-32px] sm:w-[19em] sm:max-h-[470px] sm:top-9 sm:right-0"
+            : "w-[0] max-h-[0] sm:right-0 right-[-30px] top-[50px]"
         }`}
       >
         <div className="flex flex-row justify-between p-2 items-center overflow-hidden border-b border-Light-Other-Divider dark:border-Dark-Other-Divider">
@@ -116,7 +118,7 @@ const Notification = ({ state }) => {
             </span>
           ) : null}
         </div>
-        <div className="h-[365px] overflow-auto">
+        <div className="h-[365px] overflow-x-scroll overflow-y-hidden">
           {readed ? (
             NotiFunc()
           ) : (

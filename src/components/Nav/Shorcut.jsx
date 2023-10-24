@@ -10,11 +10,8 @@ import {
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { useState, useEffect, useRef } from "react";
 
 const Shortcut = ({ state }) => {
-  const [initialRender, setInitialRender] = useState(true);
-  const contentRef = useRef(null);
   const ShortCutsObj = [
     {
       Icon: <SlCalender className="!w-5 !h-5" />,
@@ -79,16 +76,6 @@ const Shortcut = ({ state }) => {
     });
   };
 
-  useEffect(() => {
-    if (!initialRender) {
-      const contentHeight = contentRef.current.scrollHeight;
-      contentRef.current.style.maxHeight = state ? `${contentHeight}px` : "0px";
-      contentRef.current.style.width = state ? "18em" : "0em";
-    } else {
-      setInitialRender(false);
-    }
-  }, [state, initialRender]);
-
   return (
     <div
       className="text-xl text-Light-Text-Primary cursor-pointer rounded-full  dark:text-Dark-Text-Primary relative"
@@ -99,12 +86,9 @@ const Shortcut = ({ state }) => {
         className="hover:bg-Light-Action-Hover p-2 rounded-full text-Light-Text-Primary cursor-pointer  dark:text-Dark-Text-Primary dark:hover:bg-Dark-Action-Hover text-[36px]"
       />
       <div
-        ref={contentRef}
-        style={{
-          maxHeight: state ? `${contentRef.current.scrollHeight}px` : "0px",
-          width: state ? "18em" : "0em",
-        }}
-        className="absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] top-8 rounded-md duration-500 transition-Maxheight overflow-hidden z-10"
+        className={`absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] rounded-md duration-500 transition-Maxheight overflow-hidden z-10 ${          state
+          ? "w-[314px] max-h-[470px] top-[50px] right-[-70px] sm:w-[19em] sm:max-h-[470px] sm:top-9 sm:right-0"
+          : "w-[0] max-h-[0] sm:right-0 right-[-30px] top-[50px]"}`}
       >
         <div className="flex items-center justify-between px-4 py-3">
           <p className="leading-[1.5] text-[1.125rem] font-semibold text-Light-Main-Secondary dark:text-Dark-Main-Secondary">
