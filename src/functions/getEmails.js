@@ -20,3 +20,20 @@ export const getEmails = async (typeFilter) => {
     return [];
   }
 };
+
+export const getMessageById = async (messageId) => {
+    try {
+      // Find the message with the specified ID
+      const message = fakeemails.find((email) => email.id === messageId);
+
+      if (message) {
+        return message;
+      } else {
+        throw new Error("Message not found");
+      }
+    } catch (error) {
+      console.error("Error fetching message by ID:", error);
+      // Handle the error as needed, e.g., show an error message
+      throw error;
+    }
+};

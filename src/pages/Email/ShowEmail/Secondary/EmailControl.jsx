@@ -9,7 +9,7 @@ import {
 
 const EmailControl = () => {
   return (
-    <div className="py-4 px-5 flex flex-row justify-between items-center text-Light-Action-Active dark:text-Dark-Action-Active border-b border-Light-Other-Ouline_Border dark:border-Dark-Other-Ouline_Border">
+    <div className="py-4 px-5 flex flex-row justify-between items-center text-Light-Action-Active dark:text-Dark-Action-Active border-b h-[10%] border-Light-Other-Ouline_Border dark:border-Dark-Other-Ouline_Border">
       <div className="flex gap-3 text-[20px]">
         <div className="cursor-pointer">
           <PiTrashSimpleBold />

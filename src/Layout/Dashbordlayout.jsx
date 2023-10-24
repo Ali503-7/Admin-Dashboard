@@ -11,7 +11,7 @@ const Dashbordlayout = () => {
 
   const location = useLocation();
 
-  const email = location.pathname.slice(1) === 'email' || null
+  const email = location.pathname.includes('email');
 
   console.log(email)
 

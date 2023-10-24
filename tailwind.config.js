@@ -143,6 +143,7 @@ export default {
           },
           Text: {
             Primary: "#E7E3FCDE",
+            Disabled: "#E7E3FC61"
           },
           Action: {
             Active: "#E7E3FC8A",

@@ -1,6 +1,6 @@
 // useMessages.js
 import { useState, useEffect } from "react";
-import { getEmails } from "./getEmails";
+import { getEmails, getMessageById } from "./getEmails";
 
 const useMessages = (typeFilter) => {
   const [messages, setMessages] = useState([]);
@@ -18,3 +18,22 @@ const useMessages = (typeFilter) => {
 };
 
 export default useMessages;
+
+export const useMessageById = (messageId) => {
+  const [message, setMessage] = useState(null);
+  const [massageState, setMassageState] = useState("loading");
+
+  useEffect(() => {
+    getMessageById(messageId)
+      .then((result) => {
+        setMessage(result);
+        setMassageState("success");
+      })
+      .catch((err) => {
+        setError(err);
+        setMassageState("error");
+      });
+  }, [messageId]);
+
+  return { message, massageState };
+};
