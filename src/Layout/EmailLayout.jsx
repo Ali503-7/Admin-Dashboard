@@ -6,8 +6,8 @@ import { getEmails } from "../functions/getEmails";
 
 const EmailLayout = () => {
   const [filtered, setFiltered] = useState([]);
-  const [searchParams] = useSearchParams()
-  const search = searchParams.get('type')
+  const [searchParams] = useSearchParams();
+  const search = searchParams.get("type");
 
   useEffect(() => {
     getEmails(search) // Pass the typeFilter as a parameter
@@ -19,7 +19,7 @@ const EmailLayout = () => {
   }, [search]);
 
   return (
-    <div className="bg-white rounded-md w-full dark:bg-Dark-Other-Paper_Card flex overflow-hidden">
+    <div className="bg-white rounded-md w-full h-full dark:bg-Dark-Other-Paper_Card flex overflow-hidden">
       <EmailAside />
       <Outlet context={[filtered, setFiltered]} />
     </div>

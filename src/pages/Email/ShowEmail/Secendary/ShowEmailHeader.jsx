@@ -1,10 +1,10 @@
 import React from "react";
 import { useContext } from "react";
 import { SlArrowLeft } from "react-icons/sl";
-import { ThemeContext } from "../../../App";
+import { ThemeContext } from "../../../../App";
 import { Link, useNavigate } from "react-router-dom";
-import { EmailFilterAtom } from "../../../atoms/EmailAtomFilter";
-import useMessages from "../../../functions/useMassages";
+import { EmailFilterAtom } from "../../../../atoms/EmailAtomFilter";
+import useMessages from "../../../../functions/useMassages";
 
 const ShowEmailHeader = ({ id }) => {
   const { dark } = useContext(ThemeContext);
@@ -61,7 +61,7 @@ const ShowEmailHeader = ({ id }) => {
       : "Bg_Custom_Error text-Light-Main-Error";
 
   return (
-    <div className="flex flex-row justify-between py-4 px-5">
+    <div className="flex flex-row justify-between py-4 px-5 border-b-Light-Other-Ouline_Border border-b dark:border-b-Dark-Other-Ouline_Border">
       <div className="flex items-center gap-5">
         <div className="cursor-pointer" >
           <SlArrowLeft className="text-black dark:text-Dark-Main-Secondary" onClick={() => navigate(`../../email${typeFilter ? `?type=${typeFilter}` : ""}`)} />

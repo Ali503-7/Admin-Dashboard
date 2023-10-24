@@ -147,7 +147,7 @@ const EmailAside = () => {
   };
 
   return (
-    <div className="xl:min-w-[260px] xl:translate-x-0 translate-x-full overflow-hidden w-0 ">
+    <div className="xl:min-w-[260px] xl:translate-x-0 translate-x-full overflow-hidden w-0 border-r border-r-Light-Other-Ouline_Border dark:border-r-Dark-Other-Ouline_Border">
       <div className="p-5">
         <button className="Button-M w-full rounded-md  py-[7px] px-5 bg-Light-Main-Primary dark:bg-Dark-Main-Primary uppercase text-white">
           Compose

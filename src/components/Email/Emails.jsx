@@ -21,7 +21,7 @@ const Emails = ({ searchFillter, typing }) => {
       if (email.type === "Private") DotColor = "bg-Light-Main-Error";
 
       return (
-        <div
+        <li
           key={email.id}
           className={`py-4 px-5 relative flex flex-row items-center gap-[14px] border-b-[1px] text-Light-Text-Secondary dark:text-Dark-Text-Primary dark:border-b-Dark-Other-Divider border-b-Light-Other-Divider last:border-none cursor-pointer hover:shadow-Light_3 dark:hover:shadow-Dark_3 transition-shadow duration-200 ${
             !email.readState &&
@@ -58,14 +58,14 @@ const Emails = ({ searchFillter, typing }) => {
           </div>
           <div className={`sm:w-2 sm:h-2 ${DotColor} rounded-full`}></div>
           <div className="Caption min-w-fit">{email.time}</div>
-        </div>
+        </li>
       );
     });
   };
 
   return (
-    <div className="overflow-auto flex flex-col sm:h-[65vh] wax-h-full">
-      {EmilComponent()}
+    <div className="h-[90%]">
+      <ul className="overflow-auto h-full flex flex-col">{EmilComponent()}</ul>
     </div>
   );
 };

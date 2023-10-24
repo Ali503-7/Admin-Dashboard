@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import ShowEmailHeader from "./ShowEmailHeader";
+import ShowEmailHeader from "../Secendary/ShowEmailHeader";
+import EmailControl from "../Secendary/EmailControl";
 
 const ShowEmail = () => {
   const { id } = useParams();
@@ -7,6 +8,7 @@ const ShowEmail = () => {
   return (
     <div className="w-full">
       <ShowEmailHeader id={id} />
+      <EmailControl />
     </div>
   );
 };

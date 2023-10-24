@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom";
+import { useLocation, useOutletContext } from "react-router-dom";
 import Emails from "../../components/Email/Emails";
 import EmailSearch from "../../components/Email/EmailSearch";
 import { useState } from "react";
@@ -11,11 +11,7 @@ const EmailList = () => {
   const [typing, setTyping] = useState(0)
 
   return (
-    <div className="relative w-full ">
-      {/* divider */}
-      <div className="absolute w-px h-full bg-Light-Other-Divider dark:bg-Dark-Other-Divider"></div>
-
-      <div>
+    <div className="relative w-full">
         {/* Search Bar */}
 
         <EmailSearch
@@ -27,7 +23,7 @@ const EmailList = () => {
         {/* Emails */}
 
         <Emails searchFillter={searchFillter} typing={typing} />
-      </div>
+
     </div>
   );
 }

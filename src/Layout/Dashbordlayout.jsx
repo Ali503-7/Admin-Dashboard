@@ -11,10 +11,14 @@ const Dashbordlayout = () => {
 
   const location = useLocation();
 
+  const email = location.pathname.slice(1) === 'email' || null
+
+  console.log(email)
+
   // useEffect to listen for URL changes
   useEffect(() => {
     // The following callback will be executed whenever the URL changes
-    setAside(false)
+    setAside(false);
   }, [location]);
 
   return (
@@ -23,7 +27,7 @@ const Dashbordlayout = () => {
         className="min-h-screen bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background "
         onScroll={(e) => handleScroll(e)}
       >
-        <div className="flex flex-row  min-h-screen relative">
+        <div className="flex flex-row min-h-screen relative">
           <div className="max-w-[0px] xl:min-w-[260px] ">
             <aside
               className={`xl:min-w-[260px] sticky left-0 top-0 xl:translate-x-0 h-screen transition-transform z-[100] bg-Light-Other-Body_Background dark:bg-Dark-Other-Body_Background ${
@@ -38,15 +42,15 @@ const Dashbordlayout = () => {
             </aside>
           </div>
 
-          <div className="grid grid-rows-[auto,1fr,auto] container max-w-[1370px] relative">
+          <div className={"flex flex-col min-h-screen container max-w-[1370px] relative " + (email && "max-h-screen")}>
             <header className="z-50 sticky top-0">
               <Nav aside={aside} setAside={setAside} />
             </header>
-            <main className={`scrollbar-${dark ? "dark" : "light"} h-full p-6`}>
+            <main className={`p-6 flex-grow ${email && "overflow-hidden"}`}>
               <ScrollRestoration />
               <Outlet />
             </main>
-            <footer className="">
+            <footer>
               <Footer />
             </footer>
           </div>
