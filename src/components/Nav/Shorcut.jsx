@@ -86,9 +86,11 @@ const Shortcut = ({ state }) => {
         className="hover:bg-Light-Action-Hover p-2 rounded-full text-Light-Text-Primary cursor-pointer  dark:text-Dark-Text-Primary dark:hover:bg-Dark-Action-Hover text-[36px]"
       />
       <div
-        className={`absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card right-[.5em] rounded-md duration-500 transition-Maxheight overflow-hidden z-10 ${          state
-          ? "w-[314px] max-h-[470px] top-[50px] right-[-70px] sm:w-[19em] sm:max-h-[470px] sm:top-9 sm:right-0"
-          : "w-[0] max-h-[0] sm:right-0 right-[-30px] top-[50px]"}`}
+        className={`absolute shadow-Light_4 dark:shadow-Dark_4 bg-Light-Other-Paper_Card dark:bg-Dark-Other-Paper_Card w-[275px] rounded-md duration-500 transition-Maxheight overflow-hidden z-10 ${
+          state
+            ? " max-h-[470px] top-[50px] right-[-70px] sm:w-[19em] sm:max-h-[470px] sm:top-9 sm:right-0"
+            : "sm:w-0 max-h-[0] sm:right-0 right-[-70px] top-[50px] sm:top-9"
+        }`}
       >
         <div className="flex items-center justify-between px-4 py-3">
           <p className="leading-[1.5] text-[1.125rem] font-semibold text-Light-Main-Secondary dark:text-Dark-Main-Secondary">

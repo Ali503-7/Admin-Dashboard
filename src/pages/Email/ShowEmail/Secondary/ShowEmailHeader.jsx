@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { SlArrowLeft } from "react-icons/sl";
 import { ThemeContext } from "../../../../App";
 import { Link, useNavigate } from "react-router-dom";
-import { EmailFilterAtom } from "../../../../atoms/EmailAtomFilter";
+import { EmailFilterAtom } from "../../../../atoms/headerAtoms/EmailAtomFilter";
 import useMessages from "../../../../functions/useMassages";
 
 const ShowEmailHeader = ({ id }) => {

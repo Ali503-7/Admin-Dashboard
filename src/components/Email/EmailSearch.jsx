@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { FiMenu } from "react-icons/fi";
 import { useSearchParams } from "react-router-dom";
 
-const EmailSearch = ({
-  setSearchFillter,
-  fillteredData,
-  setTyping,
-}) => {
+const EmailSearch = ({ setSearchFillter, fillteredData, setTyping }) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
@@ -30,11 +27,12 @@ const EmailSearch = ({
   }, [searchInput]);
 
   useEffect(() => {
-    setSearchInput("")
-  }, [typeFilter])
+    setSearchInput("");
+  }, [typeFilter]);
 
   return (
-    <div className="w-full py-4 h-[10%] px-5 sticky top-0 flex flex-row items-center gap-3 text-Light-Text-Disabled dark:text-Dark-Text-Primary border-b-[1px] dark:border-b-Dark-Other-Divider border-b-Light-Other-Divider">
+    <div className="w-full py-4 h-[10%] px-5 sticky top-0 flex flex-row items-center gap-3 text-Light-Text-Disabled dark:text-Dark-Text-Primary border-b-[1px] dark:border-b-Dark-Other-Divider border-b-Light-Other-Divider ">
+      <FiMenu className="xl:hidden cursor-pointer" />
       <AiOutlineSearch />
       <input
         type="search"

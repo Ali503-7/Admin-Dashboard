@@ -5,7 +5,7 @@ import { AiOutlineStar, AiOutlineExclamationCircle } from "react-icons/ai";
 import { IoMdTrash } from "react-icons/io";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
-import { EmailFilterAtom } from "../../atoms/EmailAtomFilter";
+import { EmailFilterAtom } from "../../atoms/headerAtoms/EmailAtomFilter";
 import { useNavigate, useSearchParams } from "react-router-dom";
 // here will create the email page aside
 const EmailAside = () => {

@@ -7,6 +7,7 @@ import { getEmails } from "../functions/getEmails";
 const EmailLayout = () => {
   const [filtered, setFiltered] = useState([]);
   const [searchParams] = useSearchParams();
+
   const search = searchParams.get("type");
 
   useEffect(() => {
