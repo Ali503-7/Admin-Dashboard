@@ -6,8 +6,8 @@ import { useState } from "react";
 
 {/* here will create the body of the email search and filter */}
 const EmailList = () => {
-  const [fillteredData] = useOutletContext();
-  const [searchFillter, setSearchFillter] = useState([])
+  const [filteredData] = useOutletContext();
+  const [searchFilter, setSearchFilter] = useState([])
   const [typing, setTyping] = useState(0)
 
   return (
@@ -15,14 +15,14 @@ const EmailList = () => {
         {/* Search Bar */}
 
         <EmailSearch
-          setSearchFillter={setSearchFillter}
-          fillteredData={fillteredData}
+          setSearchFilter={setSearchFilter}
+          filteredData={filteredData}
           setTyping={setTyping}
         />
 
         {/* Emails */}
 
-        <Emails searchFillter={searchFillter} typing={typing} />
+        <Emails filteredData={searchFilter} typing={typing} />
 
     </div>
   );

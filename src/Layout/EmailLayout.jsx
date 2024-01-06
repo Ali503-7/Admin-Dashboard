@@ -14,7 +14,6 @@ const EmailLayout = () => {
     getEmails(search) // Pass the typeFilter as a parameter
       .then((result) => setFiltered(result))
       .catch((error) => {
-        // Handle the error
         console.error("Error in fetching emails:", error);
       });
   }, [search]);

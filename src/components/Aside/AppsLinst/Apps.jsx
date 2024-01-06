@@ -4,7 +4,7 @@ import { BiEnvelope } from "react-icons/bi";
 import { BsChatLeft } from "react-icons/bs";
 import { AiOutlineCalendar } from "react-icons/ai";
 import { MdContentCopy } from "react-icons/md";
-import Invoice from "./Invoice/Invoice";
+import { FaGears } from "react-icons/fa6";
 import { ThemeContext } from "../../../App";
 
 const Apps = () => {
@@ -15,12 +15,12 @@ const Apps = () => {
       <NavLink
         to="/email"
         className={({ isActive }) =>
-        isActive
-          ? dark
-            ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
-            : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
-          : `NavLink`
-      }
+          isActive
+            ? dark
+              ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+              : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+            : `NavLink`
+        }
       >
         <div className={` `}>
           <BiEnvelope />
@@ -30,45 +30,47 @@ const Apps = () => {
       <NavLink
         to="/chat"
         className={({ isActive }) =>
-        isActive
-          ? dark
-            ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
-            : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
-          : `NavLink`
-      }
+          isActive
+            ? dark
+              ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+              : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+            : `NavLink`
+        }
         onClick={() => setActiveState("chat")}
       >
         <BsChatLeft />
         Chat
+        <FaGears className="ml-auto" />
       </NavLink>
       <NavLink
         to="/calendar"
         className={({ isActive }) =>
-        isActive
-          ? dark
-            ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
-            : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
-          : `NavLink`
-      }
+          isActive
+            ? dark
+              ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+              : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+            : `NavLink`
+        }
       >
         <AiOutlineCalendar />
         Calendar
+        <FaGears className="ml-auto" />
       </NavLink>
-      {/*  */}
-      <Invoice />
       {/*  */}
       <NavLink
         to="/dialog-examples"
+        disable={true}
         className={({ isActive }) =>
-        isActive
-          ? dark
-            ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
-            : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
-          : `NavLink`
-      }
+          isActive
+            ? dark
+              ? "shadow-Dark_3 Dark_Bg_Active_Menu NavLink"
+              : "Bg_Custom_Active_menu shadow-Light_3 text-white NavLink"
+            : `NavLink`
+        }
       >
         <MdContentCopy />
         <p className="truncate">Dialog Examples</p>
+        <FaGears className="ml-auto" />
       </NavLink>
     </div>
   );

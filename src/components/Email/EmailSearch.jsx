@@ -3,7 +3,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import { useSearchParams } from "react-router-dom";
 
-const EmailSearch = ({ setSearchFillter, fillteredData, setTyping }) => {
+const EmailSearch = ({ setSearchFilter, filteredData, setTyping }) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
@@ -15,12 +15,12 @@ const EmailSearch = ({ setSearchFillter, fillteredData, setTyping }) => {
   useEffect(() => {
     if (searchInput == "") {
       setTyping(0);
-      setSearchFillter(fillteredData);
+      setSearchFilter(filteredData);
       return;
     }
     setTyping((prev) => (prev += 1));
-    setSearchFillter(
-      fillteredData.filter((massages) => {
+    setSearchFilter(
+      filteredData.filter((massages) => {
         return massages.name.toLowerCase().includes(searchInput.toLowerCase());
       })
     );

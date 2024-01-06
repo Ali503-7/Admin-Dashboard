@@ -1,14 +1,14 @@
 import { AiOutlineStar } from "react-icons/ai";
 import { Link, useOutletContext } from "react-router-dom";
 
-const Emails = ({ searchFillter, typing }) => {
-  const [fillterd] = useOutletContext();
+const Emails = ({ filteredData, typing }) => {
+  const [filleted] = useOutletContext();
 
   const data = () => {
-    if (searchFillter.length < fillterd.length && typing !== 0) {
-      return Array.isArray(searchFillter) ? searchFillter : [];
+    if (filteredData.length < filleted.length && typing !== 0) {
+      return Array.isArray(filteredData) ? filteredData : [];
     } else {
-      return Array.isArray(fillterd) ? fillterd : [];
+      return Array.isArray(filleted) ? filleted : [];
     }
   };
 
