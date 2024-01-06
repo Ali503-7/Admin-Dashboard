@@ -5,6 +5,8 @@
 To install the necessary node modules, run the following command:
 
 ```bash
+git clone https://github.com/Ali503-7/Admin-Dashboard.git
+cd Admin-Dashboard
 npm i
 ```
 
