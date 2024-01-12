@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import { useSearchParams } from "react-router-dom";
+import emailAsideMenu from "../../atoms/headerAtoms/email-aside-atom";
 
 const EmailSearch = ({ setSearchFilter, filteredData, setTyping }) => {
   const [searchInput, setSearchInput] = useState("");
@@ -32,7 +33,7 @@ const EmailSearch = ({ setSearchFilter, filteredData, setTyping }) => {
 
   return (
     <div className="w-full py-4 h-[10%] px-5 sticky top-0 flex flex-row items-center gap-3 text-Light-Text-Disabled dark:text-Dark-Text-Primary border-b-[1px] dark:border-b-Dark-Other-Divider border-b-Light-Other-Divider ">
-      <FiMenu className="xl:hidden cursor-pointer" />
+      <FiMenu className="xl:hidden cursor-pointer" onClick={() => emailAsideMenu.toggle()} />
       <AiOutlineSearch />
       <input
         type="search"

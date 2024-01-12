@@ -3,22 +3,22 @@ import { IoSendSharp } from "react-icons/io5";
 import { RiBallPenLine } from "react-icons/ri";
 import { AiOutlineStar, AiOutlineExclamationCircle } from "react-icons/ai";
 import { IoMdTrash } from "react-icons/io";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../../App";
-import { EmailFilterAtom } from "../../atoms/headerAtoms/EmailAtomFilter";
+import { EmailFilterAtom } from "../../atoms/headerAtoms/email-filter-atom";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import emailAsideMenu from "../../atoms/headerAtoms/email-aside-atom";
 // here will create the email page aside
 const EmailAside = () => {
   const { dark } = useContext(ThemeContext);
   const [, setFilter] = EmailFilterAtom.useState();
   const [, setSearchParams] = useSearchParams();
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
 
   const HandelFilter = (text) => {
     if (text && text.target && text.target.getAttribute("data-key")) {
       const filterType = text.target.getAttribute("data-key");
-      navigate("/email")
+      navigate("/email");
       setFilter(filterType);
       setSearchParams({ type: filterType });
     }
@@ -146,10 +146,16 @@ const EmailAside = () => {
     });
   };
 
+  const { opened } = emailAsideMenu.useValue();
+
   return (
-    <div className="xl:min-w-[260px] xl:translate-x-0 border-r-0 translate-x-full overflow-hidden w-0 xl:border-r border-r-Light-Other-Ouline_Border dark:border-r-Dark-Other-Ouline_Border">
+    <div
+      className={`border-r-0 overflow-hidden xl:border-r border-r-Light-Other-Ouline_Border dark:border-r-Dark-Other-Ouline_Border transition-all ${
+        opened ? "w-[360px]" : "w-0"
+      }`}
+    >
       <div className="p-5">
-        <button className="Button-M w-full rounded-md  py-[7px] px-5 bg-Light-Main-Primary dark:bg-Dark-Main-Primary uppercase text-white">
+        <button className="Button-M w-full rounded-md py-[7px] px-5 bg-Light-Main-Primary dark:bg-Dark-Main-Primary uppercase text-white">
           Compose
         </button>
       </div>
